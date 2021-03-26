@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["7c"]={"title":null,"keywords":null,"body":{"df":2,"docs":{"195":1.0,"17124":1.0},"a":{"df":2,"docs":{},"y":{"df":2,"docs":{},"s":{"df":2,"docs":{},"t":{"df":2,"docs":{},"o":{"df":2,"docs":{},"n":{"df":2,"docs":{"1655":1.0,"1657":1.0}}}}}}},"m":{"df":2,"docs":{"8675":1.0,"8676":1.0}}}}

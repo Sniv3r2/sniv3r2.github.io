@@ -1,0 +1,1298 @@
+/* ---------- */
+/* Define page sections */
+/* Changed margin from 1.2em, added webkit to fix iPhone font size issues in the Legend/Footnotes/Reference sections */
+.graphic .figure {
+font-size: 100%;
+text-align: left;
+font-family: Verdana, Geneva, sans-serif;
+background-color: White;
+margin: 1em;
+padding: 0em;
+-webkit-text-size-adjust: 100%;
+}
+/* ---------- */
+
+.graphic .ttl {
+word-wrap: break-word;
+line-height: 1.4em;
+text-align: left;
+font-size: 1em;
+font-weight: bold;
+padding: 0em .2em .4em .2em;
+}
+
+.graphic .ttl sup {
+font-size: .825em;
+line-height: 0.65em;
+vertical-align: baseline;
+position: relative;
+top: -0.475em;
+padding-left: .15em;
+}
+
+.graphic .ttl sub {
+font-size: .825em;
+line-height: 0.5em;
+vertical-align: baseline;
+position: relative;
+bottom: -0.325em;
+padding-right: .15em;
+padding-left: .15em;
+}
+
+.graphic .cntnt {
+border-top: 5px solid #009966;
+border-bottom: 2px solid #009966;
+text-align: center;
+margin: 0em;
+padding: 0em .625em;
+}
+
+.graphic .cntnt table {
+width: 100%;
+}
+
+*html .graphic .cntnt table {
+width: 95%;
+}
+
+.graphic .figure table {
+text-align: left;
+border-right: 1px solid Black;
+font-size: .75em;
+margin: 0em;
+padding: 0em;
+}
+
+/* Changed vertical-align from top and added line-height, changed border-bottom color from DDD, changed padding bottom from .6em */
+.graphic .figure td {
+vertical-align: text-top;
+line-height: 1.5em;
+border-left: 1px solid Black;
+border-bottom: 1px solid #CCCCCC;
+padding: .3em .6em .3em .6em;
+}
+/* ---------- */
+/* ---------- */
+
+/* Container style */
+.graphic .figure table.container {
+border: none;
+}
+
+.graphic .figure table.container table {
+text-align: left;
+font-size: 1em;
+margin: 0em;
+padding: 0em;
+border-bottom: 1px solid Black;
+}
+
+.graphic .figure td.container {
+vertical-align: top;
+border: none;
+padding: 0em .25em;
+}
+/* ---------- */
+
+/* New Legend/Reference/Footnote sections to go with new HTML code - Added line-height to .lgnd, changed font-size, added padding, added border-bottom */
+.graphic .graphic_lgnd {
+word-wrap: break-word;
+line-height: 1.5em;
+font-family: Verdana, Geneva, sans-serif;
+font-size: .8em;
+text-align: left;
+padding-top: .4em;
+padding-bottom: .4em;
+border-top: 1px solid #CCCCCC;
+}
+
+.graphic .graphic_footnotes {
+word-wrap: break-word;
+line-height: 1.5em;
+font-family: Verdana, Geneva, sans-serif;
+font-size: .75em;
+text-align: left;
+padding-top: .4em;
+padding-bottom: .4em;
+border-top: 1px solid #CCCCCC;
+}
+
+.graphic .graphic_reference {
+word-wrap: break-word;
+line-height: 1.5em;
+font-family: Verdana, Geneva, sans-serif;
+font-size: .75em;
+font-style: italic;
+text-align: left;
+padding-top: .4em;
+border-top: 1px solid #CCCCCC;
+}
+/* ---------- */
+
+/* Footnotes span classes - Added font-size for lozenges and removed margin-left -0.2em/-0.4em */
+.graphic .bullet {
+padding-left: .1em;
+}
+
+.graphic .lozenge {
+font-size: .85em;
+}
+
+.graphic .double_bullet {
+padding-left: .2em;
+}
+
+.graphic .double_lozenge {
+font-size: .85em;
+}
+/* ---------- */
+
+/* Text modifiers - Added style to sup and sub */
+.graphic .figure strong {
+font-weight: bold;
+}
+
+.graphic .figure em {
+font-style: italic;
+}
+
+.graphic .figure td sup {
+font-size: 0.9em;
+line-height: 0.65em;
+vertical-align: baseline;
+position: relative;
+top: -0.475em;
+padding-left: .15em;
+}
+
+.graphic .figure td sub {
+font-size: 0.9em;
+line-height: 0.5em;
+vertical-align: baseline;
+position: relative;
+bottom: -0.325em;
+padding-right: .15em;
+padding-left: .15em;
+}
+
+.graphic .graphic_lgnd sup {
+font-size: 0.8em;
+line-height: 0.65em;
+vertical-align: baseline;
+position: relative;
+top: -0.475em;
+padding-left: .15em;
+}
+
+.graphic .graphic_lgnd sub {
+font-size: 0.8em;
+line-height: 0.5em;
+vertical-align: baseline;
+position: relative;
+bottom: -0.325em;
+padding-right: .15em;
+padding-left: .15em;
+}
+
+.graphic .graphic_footnotes sup {
+font-size: 0.85em;
+line-height: 0.65em;
+vertical-align: baseline;
+position: relative;
+top: -0.5em;
+padding-left: .15em;
+}
+
+.graphic .graphic_footnotes sub {
+font-size: 0.85em;
+line-height: 0.5em;
+vertical-align: baseline;
+position: relative;
+bottom: -0.4em;
+padding-right: .15em;
+padding-left: .15em;
+}
+
+.graphic .graphic_reference sup {
+font-size: 0.85em;
+line-height: 0.65em;
+vertical-align: baseline;
+position: relative;
+top: -0.5em;
+padding-left: .15em;
+}
+
+.graphic .graphic_reference sub {
+font-size: 0.85em;
+line-height: 0.5em;
+vertical-align: baseline;
+position: relative;
+bottom: -0.4em;
+padding-right: .15em;
+padding-left: .15em;
+}
+
+.graphic .small {
+font-size: .85em;
+}
+
+.graphic .red {
+color: #FF0000;
+}
+
+.graphic .green {
+color:#019e30;
+}
+
+.graphic .blue {
+ color: #0000FF;
+}
+/* ---------- */
+
+/* Link colors */
+.graphic .figure a:link {
+color: #0000FF;
+}
+
+.graphic .figure a:visited {
+color: #660099;
+}
+/* ---------- */
+
+/* Image styling */
+.graphic .cntnt img {
+display: block;
+margin: 0 auto;
+padding: 0;
+}
+
+.graphic .graphic_lgnd img, .cntnt table img {
+margin: 0;
+padding: 0;
+display: inline;
+}
+/* ---------- */
+
+/* LWW contract link - These styles were added by the Web team */
+.graphic .figure .contractual a {
+color: #336633;
+background-color: #FFFFFF;
+text-decoration: none;
+}
+
+.graphic .figure .contractual a:link {
+color: #336633;
+background-color: #FFFFFF;
+text-decoration: none;
+}
+
+.graphic .figure .contractual a:visited {
+color: #336633;
+background-color: #FFFFFF;
+text-decoration: none;
+}
+
+.graphic .figure .contractual a:hover {
+text-decoration: underline;
+}
+/* ---------- */
+
+/* Heading styles - Added subtitle_single4,5 and subtitle_left4,5 - Changed border-bottom color sequence from 999/CCC - Changed padding-left */
+.graphic td.subtitle1 {
+vertical-align: middle;
+text-align: center;
+font-size: 1.2em;
+font-weight: bold;
+padding-top: .5em;
+padding-bottom: .3em;
+border-bottom: 3px solid Black;
+background-color: #EEEEEE;
+}
+
+.graphic td.subtitle2 {
+vertical-align: middle;
+text-align: center;
+font-size: 1em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+border-bottom: 3px solid #555555;
+}
+
+.graphic td.subtitle3 {
+vertical-align: middle;
+text-align: center;
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+border-bottom: 3px solid #777777;
+}
+
+.graphic td.subtitle4 {
+vertical-align: middle;
+text-align: center;
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+border-bottom: 3px solid #999999;
+}
+
+.graphic td.subtitle5 {
+vertical-align: middle;
+text-align: center;
+font-size: .9em;
+font-weight: normal;
+padding-top: .4em;
+padding-bottom: .3em;
+border-bottom: 3px solid #BBBBBB;
+}
+
+.graphic td.subtitle1_single {
+vertical-align: middle;
+font-size: 1.2em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: .42em;
+border-bottom: 1px solid #000000;
+background-color: #EEEEEE;
+}
+
+.graphic td.subtitle2_single {
+vertical-align: middle;
+font-size: 1em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 1.5em;
+border-bottom: 1px solid #555555;
+}
+
+.graphic td.subtitle3_single {
+vertical-align: middle;
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 3.0em;
+border-bottom: 1px solid #777777;
+}
+
+.graphic td.subtitle4_single {
+vertical-align: middle;
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 4.5em;
+border-bottom: 1px solid #999999;
+}
+
+.graphic td.subtitle5_single {
+vertical-align: middle;
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 6em;
+border-bottom: 1px solid #BBBBBB;
+}
+
+.graphic td.subtitle1_left {
+font-size: 1.2em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: .42em;
+border-bottom: 1px solid Black;
+background-color: #EEEEEE;
+}
+
+.graphic td.subtitle2_left {
+font-size: 1em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+border-bottom: 1px solid #555555;
+}
+
+.graphic td.subtitle3_left {
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 2em;
+border-bottom: 1px solid #777777;
+}
+
+.graphic td.subtitle4_left {
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 3.5em;
+border-bottom: 1px solid #999999;
+}
+
+.graphic td.subtitle5_left {
+font-size: .9em;
+font-weight: bold;
+padding-top: .4em;
+padding-bottom: .3em;
+padding-left: 5em;
+border-bottom: 1px solid #BBBBBB;
+}
+/* ---------- */
+
+/* Sublist styles - Made indentation (padding) consistent with all sublist styles */
+.graphic td.sublist1_start {
+padding-bottom: .3em;
+}
+
+.graphic td.sublist2_start {
+padding-left: 2em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist3_start {
+padding-left: 3.5em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist4_start {
+padding-left: 5em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist5_start {
+padding-left: 6.5em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist1 {
+font-size: .9em;
+padding-left: 2.25em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist2 {
+font-size: .9em;
+padding-left: 3.95em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist3 {
+font-size: .9em;
+padding-left: 5.6em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist4 {
+font-size: .9em;
+padding-left: 7.3em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist5 {
+font-size: .9em;
+padding-left: 8.9em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist6 {
+font-size: .9em;
+padding-left: 10.6em;
+padding-bottom: .3em;
+}
+
+.graphic td.sublist_other_start {
+padding-bottom: .3em;
+}
+
+.graphic td.sublist_other {
+font-size: .9em;
+padding-left: .67em;
+padding-bottom: .3em;
+}
+/* ---------- */
+
+/* Centering text - Removed the TD so they can be used in TR tags */
+.graphic .centered {
+text-align: center;
+}
+
+.graphic .sublist_other_start_centered {
+padding-bottom: .3em;
+text-align: center;
+}
+
+.graphic .sublist_other_centered {
+font-size: .9em;
+padding: .3em .67em .3em .67em;
+text-align: center;
+}
+/* ---------- */
+
+/* Indent styles - Changed indents - Added indent4 and indent5 */
+.graphic td.indent1 {
+padding-left: 2em;
+}
+
+.graphic td.indent2 {
+padding-left: 3.5em;
+}
+
+.graphic td.indent3 {
+padding-left: 5em;
+}
+
+.graphic td.indent4 {
+padding-left: 6.5em;
+}
+
+.graphic td.indent5 {
+padding-left: 8em;
+}
+/* ---------- */
+
+/* Divider class - New class that can be applied to td tag */
+.graphic .divider_bottom td {
+border-bottom: 1px solid Black;
+}
+
+.graphic .divider_top td {
+border-top: 1px solid Black;
+}
+
+.graphic td.divider_bottom {
+border-bottom: 1px solid Black;
+}
+
+.graphic td.divider_top {
+border-top: 1px solid Black;
+}
+/* ---------- */
+
+/* ul style attributes (figure) - New levels/symbols/spacing (no heading or heading without number or alpha indicator) */	
+.graphic .figure td ul {
+list-style-type: square;
+list-style-position: outside;
+margin: 0em;
+padding-left: 1.5em;
+}
+	
+.graphic .figure td ul ul {
+list-style-type: disc;
+padding-left: 1.7em;
+}
+	
+.graphic .figure td ul ul ul {
+list-style-type: circle;
+}
+	
+.graphic .figure td ul ul ul ul {
+list-style-type: square;
+}
+	
+.graphic .figure td ul ul ul ul ul {
+list-style-type: disc;
+}
+/* ---------- */
+
+/* ul style attributes (figure) - New class (heading with number or alpha indicator) */
+.graphic .figure td ul.decimal_heading {
+margin-left: 1.3em;
+}
+/* ---------- */
+
+/* ol style attributes (figure) - (numbers underneath heading) */
+.graphic .figure td ol {
+list-style-type: decimal;
+list-style-position: outside;
+margin: 0em;
+padding-left: 2.85em;
+}
+/* ---------- */
+
+/* ol style attributes (figure) - New class (numbers 1-99 with no heading) */
+.graphic .figure td ol.numbers_no_heading {
+padding-left: 2.35em;
+}
+/* ---------- */
+
+/* ol style attributes (figure) - New class (numbers 1-9 only with no heading) */
+.graphic .figure td ol.numbers_to_nine {
+padding-left: 1.85em;
+}
+/* ---------- */
+
+/* li style attributes (figure) */
+.graphic .figure td li {
+list-style-position: outside;
+margin-top: .2em;
+margin-bottom: .2em;
+padding: 0em;
+}
+/* ---------- */
+
+/* ul style attributes (legend) - New levels/symbols/spacing (no heading or heading without number or alpha indicator) */
+.graphic .graphic_lgnd ul {
+list-style-type: square;
+list-style-position: outside;
+line-height: 1.5em;
+margin: 0em;
+padding-left: 1.5em;
+display: block;
+zoom: 1;
+}
+
+.graphic .graphic_lgnd ul ul {
+list-style-type: disc;
+padding-left: 1.7em;
+}
+
+.graphic .graphic_lgnd ul ul ul {
+list-style-type: circle;
+}
+
+.graphic .graphic_lgnd ul ul ul ul {
+list-style-type: square;
+}
+
+.graphic .graphic_lgnd ul ul ul ul ul {
+list-style-type: disc;
+}
+/* ---------- */
+
+/* ul style attributes (legend) - New class - Levels/symbols/spacing (heading with number or alpha indicator) */
+.graphic .graphic_lgnd ul.decimal_heading {
+margin-left: 1.5em;
+}
+/* ---------- */
+
+/* li style attributes (legend) */
+.graphic .graphic_lgnd ul li {
+list-style-position: outside;
+}
+/* ---------- */
+
+/* ol style attributes (legend) (numbers 1-99 with or without heading) */
+.graphic .graphic_lgnd ol {
+list-style-type: decimal;
+list-style-position: outside;
+line-height: 1.5em;
+margin: 0em;
+padding-left: 3.4em;
+display: block;
+zoom: 1;
+}
+/* ---------- */
+
+/* ol style attributes (legend) - New class (no heading and 1-9 only) */
+.graphic .graphic_lgnd ol.numbers_to_nine {
+padding-left: 1.9em;
+}
+/* ---------- */
+
+/* li style attributes (legend) */
+.graphic .graphic_lgnd ol li {
+list-style-position: outside;
+display: list-item;
+}
+/* ---------- */
+
+/* ul style attributes (footnotes) - New levels/symbols/spacing */
+.graphic .graphic_footnotes ul {
+list-style-type: square;
+list-style-position: outside;
+line-height: 1.5em;
+margin-top: 0em;
+margin-bottom: 0em;
+margin-left: 1.3em;
+padding-left: 1.5em;
+display: block;
+zoom: 1;
+}
+
+.graphic .graphic_footnotes ul ul {
+list-style-type: disc;
+margin: 0em;
+padding-left: 1.7em;
+}
+
+.graphic .graphic_footnotes ul ul ul {
+list-style-type: circle;
+}
+
+.graphic .graphic_footnotes ul ul ul ul {
+list-style-type: square;
+}
+
+.graphic .graphic_footnotes ul ul ul ul ul {
+list-style-type: disc;
+}
+/* ---------- */
+
+/* ul style attributes (footnotes) - New class for double footnote symbols */
+.graphic .graphic_footnotes ul.double_footnote_list {
+margin-left: 2em;
+}
+/* ---------- */
+
+/* li style attributes (footnotes) */
+.graphic .graphic_footnotes ul li {
+list-style-position: outside;
+}
+/* ---------- */
+
+/* ol style attributes (footnotes) */
+.graphic .graphic_footnotes ol {
+list-style-type: decimal;
+list-style-position: outside;
+display: block;
+line-height: 1.5em;
+margin: 0em;
+padding-left: 3.7em;
+zoom: 1;
+}
+/* ---------- */
+
+/* ol style attributes (footnotes) - New class for double footnote symbols */
+.graphic .graphic_footnotes ol.double_footnote_list {
+padding-left: 4.4em;
+}
+/* ---------- */
+
+/* li style attributes (footnotes) */
+.graphic .graphic_footnotes ol li {
+list-style-position: outside;
+display: list-item;
+}
+/* ---------- */
+
+/* ul style attributes (references) - New levels/symbols/spacing */
+.graphic .graphic_reference ul {
+list-style-type: square;
+list-style-position: outside;
+line-height: 1.5em;
+margin-top: 0em;
+margin-bottom: 0em;
+margin-left: 1.5em;
+padding-left: 1.5em;
+display: block;
+zoom: 1;
+}
+
+.graphic .graphic_reference ul ul {
+list-style-type: disc;
+margin: 0em;
+padding-left: 1.7em;
+}
+
+.graphic .graphic_reference ul ul ul {
+list-style-type: circle;
+}
+
+.graphic .graphic_reference ul ul ul ul {
+list-style-type: square;
+}
+
+.graphic .graphic_reference ul ul ul ul ul {
+list-style-type: disc;
+}
+/* ---------- */
+
+/* ol style attributes (references) - Increased padding/added line height */
+.graphic .graphic_reference ol {
+list-style-type: decimal;
+list-style-position: outside;
+line-height: 1.5em;
+margin: 0em;
+padding-left: 3.5em;
+display: block;
+zoom: 1;
+}
+/* ---------- */
+
+/* li style attributes (references) */
+.graphic .graphic_reference ol li {
+list-style-position: outside;
+display: list-item;
+}
+
+.graphic .graphic_reference ul li {
+list-style-position: outside;
+}
+/* ---------- */
+
+/* HR style attribute - Changed color from #666 - Changed height from .1em - Added margin-top/margin-bottom */
+.graphic .figure td hr {
+height: 1px;
+border-width: 0em;
+color: #BBBBBB;
+background-color: #BBBBBB;
+margin-top: .2em;
+margin-bottom: .2em;
+}
+/* ---------- */
+
+/* P style attributes - Changed padding-bottom from .6em for parent - Added indent/sublist/center classes */
+.graphic .figure td p {
+margin: 0em;
+padding-bottom: .45em;
+}
+
+.graphic .figure td p.indent1 {
+padding-left: 1.15em;
+}
+
+.graphic .figure td p.indent2 {
+padding-left: 2.55em;
+}
+
+.graphic .figure td p.indent3 {
+padding-left: 3.95em;
+}
+
+.graphic .figure td p.indent4 {
+padding-left: 5.35em;
+}
+
+.graphic .figure td p.indent5 {
+padding-left: 6.75em;
+}
+
+.graphic .figure td p.centered {
+text-align: center;
+}
+
+.graphic .figure td p.sublist_other_start_centered {
+padding-bottom: .3em;
+text-align: center;
+}
+
+.graphic .figure td p.sublist_other_centered {
+font-size: .9em;
+padding: .3em .67em .3em .67em;
+text-align: center;
+}
+
+.graphic .figure td p.sublist1_start {
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist2_start {
+padding-left: 1.15em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist3_start {
+padding-left: 2.55em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist4_start {
+padding-left: 3.95em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist5_start {
+padding-left: 5.35em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist1 {
+font-size: .9em;
+padding-left: 1.25em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist2 {
+font-size: .9em;
+padding-left: 2.85em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist3 {
+font-size: .9em;
+padding-left: 4.35em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist4 {
+font-size: .9em;
+padding-left: 5.95em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist5 {
+font-size: .9em;
+padding-left: 7.5em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist6 {
+font-size: .9em;
+padding-left: 9em;
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist_other_start {
+padding-bottom: .3em;
+}
+
+.graphic .figure td p.sublist_other {
+font-size: .9em;
+padding-bottom: .3em;
+}
+/* ---------- */
+
+/* Space style */
+.graphic td.space {
+padding: 0em;
+}
+/* ---------- */
+
+/* New classes - Row color (highlight) */
+.graphic .highlight_yellow_text {
+background-color: #FFFF99;
+}
+
+.graphic .highlight_gray_text {
+background-color: #EEEEEE;
+}
+
+.graphic .highlight_green_text {
+background-color: #E7FFE2;
+}
+
+.graphic .highlight_blue_text {
+background-color: #DEE7FF;
+}
+
+.graphic .highlight_red_text {
+background-color: #FEC8C7;
+}
+/* ---------- */
+
+/* New classes - Checkboxes - box3 and box4 are for sublists */
+.graphic .primarybox_right {
+font-size: .75em;
+font-family: Verdana, Geneva, sans-serif;
+line-height: 1em;
+margin-top: .25em;
+margin-left: .5em;
+padding-left: .8em;
+border-top: 1px solid Black;
+border-right: 2px solid Black;
+border-bottom: 2px solid Black;
+border-left: 1px solid Black;
+background-color: White;
+overflow: hidden;
+float: right;
+clear: both;
+}
+
+.graphic .primarybox_left {
+font-size: .75em;
+font-family: Verdana, Geneva, sans-serif;
+line-height: 1em;
+margin-top: .25em;
+margin-right: .5em;
+padding-right: .8em;
+border-top: 1px solid Black;
+border-right: 2px solid Black;
+border-bottom: 2px solid Black;
+border-left: 1px solid Black;
+background-color: White;
+overflow: hidden;
+float: left;
+clear: both;
+}
+
+.graphic .secondarybox_right {
+font-size: .75em;
+font-family: Verdana, Geneva, sans-serif;
+line-height: 1em;
+margin-top: .25em;
+margin-right: .2em;
+margin-left: .5em;
+padding-left: .8em;
+border-top: 1px solid Black;
+border-right: 2px solid Black;
+border-bottom: 2px solid Black;
+border-left: 1px solid Black;
+background-color: White;
+overflow: hidden;
+float: right;
+clear: both;
+}
+
+.graphic .secondarybox_left {
+font-size: .75em;
+font-family: Verdana, Geneva, sans-serif;
+line-height: 1em;
+margin-top: .25em;
+margin-right: .5em;
+margin-left: .2em;
+padding-right: .8em;
+border-top: 1px solid Black;
+border-right: 2px solid Black;
+border-bottom: 2px solid Black;
+border-left: 1px solid Black;
+background-color: White;
+overflow: hidden;
+float: left;
+clear: both;
+}
+/* ---------- */
+
+/* Backwards compatible code */
+/* Old Legend/Reference/Footnote sections that works with preexisting HTML code */
+.lgnd {
+word-wrap: break-word;
+font-size: .85em;
+text-align: left;
+padding: .5em .2em 1em .2em;
+}
+
+.reference {
+word-wrap: break-word;
+font-size: .85em;
+font-style: italic;
+}
+
+.footnotes {
+word-wrap: break-word;
+font-size: .85em;
+}
+/* ---------- */
+
+/* Old Legend/Reference/Footnote ul/ol that works with preexisting HTML code */
+.lgnd ul {
+margin: 0 0 0 0;
+padding: 0 0 0 1.8em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.lgnd ol {
+margin: 0 0 0 0;
+padding: 0 0 0 2.5em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.lgnd ol li {
+list-style-type: decimal;
+display: list-item;
+}
+	
+.lgnd ul li {
+list-style-type: disc;
+display: list-item;
+}
+	
+.footnotes ul {
+margin: 0 0 0 0;
+padding: 0 0 0 2.1em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.footnotes ol {
+margin: 0 0 0 0;
+padding: 0 0 0 2.8em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.footnotes ol li {
+list-style-type: decimal;
+display: list-item;
+}
+	
+.footnotes ul li {
+list-style-type: disc;
+display: list-item;
+}
+	
+.reference ul {
+margin: 0 0 0 0;
+padding: 0 0 0 2.1em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.reference ol {
+margin: 0 0 0 0;
+padding: 0 0 0 2.8em;
+list-style-position: outside;
+display: inline-block;
+zoom: 1;
+*display: inline;
+}
+	
+.reference ol li {
+list-style-type: decimal;
+display: list-item;
+}
+	
+.reference ul li {
+list-style-type: disc;
+display: list-item;
+}
+/* ---------- */
+
+/* Img code that works with preexisting HTML code */
+.lgnd img, .cntnt table img {
+margin: 0;
+padding: 0;
+display: inline;
+}
+/* ---------- */
+/* ---------- */
+
+#graphicVersion {
+    padding-top: 12px;
+    font-size: 0.75em;
+}
+
+/*
+--------------------------------------------------------------------------------
+ The graphics page
+--------------------------------------------------------------------------------
+*/
+#graphics.tableScroll{
+	overflow: visible;	
+}
+
+#graphics #graphicsToolbar {
+	margin: 1em;
+	overflow: hidden;
+}
+
+#graphics #graphicsCopy {
+	float: left;
+	width: 25%;
+	font-size: 72%;
+}
+
+#graphics #graphicsLinks {
+	float: right;
+	text-align: right;
+}
+
+#graphics .textLink {
+	vertical-align: 50%;
+	margin-right: 0.75em;
+}
+
+#graphics #graphicsLinks img {
+	width: 24px;
+	height: 20px; 
+}
+
+#graphics .graphic {
+	margin: 0;
+	padding: 0 10px;
+}
+
+#graphics .graphic2,
+#graphics .normal {
+	margin: 0;
+	padding: 0 10px;
+	overflow: hidden;
+}
+
+#graphics .graphic .figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#graphics .graphic2 .movie,
+#graphics .normal .movie {
+	float: left;
+	margin: 1.2em 20px;
+	padding-top: 2em;
+}
+
+/* TODO MRC: remove these 4 rules when they get in UTD_gx_gen.css */ 
+.figure .contractual a { 
+  color: #336633;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.figure .contractual a:link { 
+  color: #336633;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.figure .contractual a:visited { 
+  color: #336633;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.figure .contractual a:hover { 
+  text-decoration: underline; 
+}
+
+.float {
+    float: left;
+}
+
+.simpleHeader #headerSimpleRight {
+    float: right;
+    margin-right: 15px;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#printHeader {
+    display: block;
+}
+
+#pageContainer {
+    position: relative;
+    padding-top: 00px;
+}
+
+.simpleHeader {
+    font-size: 84%;
+    margin: 13px 0 0 15px;
+}
+
+#graphicsCopy {
+    margin: 1em;
+    display: block;
+    width: 25%;
+    font-size: 72%;
+    clear: both;
+}
+
+.videoplayer {
+    margin-left: auto;
+	margin-right: auto;
+}

@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["z5"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"2":{"df":0,"docs":{},"0":{"df":0,"docs":{},"2":{"df":0,"docs":{},"0":{"df":0,"docs":{},"2":{"df":0,"docs":{},"3":{"df":0,"docs":{},"6":{"df":0,"docs":{"14765":1.0}}}}}}}}}}

@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["fj"]={"title":null,"keywords":null,"body":{"df":2,"docs":{"2629":1.0,"13308":1.0},"h":{"df":2,"docs":{},"n":{"df":2,"docs":{"1593":2.0,"18337":1.0},"2":{"df":2,"docs":{"1593":1.4142135623730952}}}}}}

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lexicomp&reg; Drug Interactions - UpToDate</title>
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="files/normalize.min.css">
+    <link rel="stylesheet" href="files/di_app.css">
+    <link rel="stylesheet" href="files/di_lexidoc.css">
+</head>
+<body class="init">
+    <div id="header-container">
+        <div id="header">
+            <a href="../UpToDate.htm" class="utd-logo"></a>
+            <a class="lexi-tab">Lexicomp&reg; Drug Interactions<span class="beta-label"> BETA</span></a>
+        </div>
+        <div id="toolbar" class="mobile-druglist mobile-analyze mobile-document mobile-search basic-druglist basic-analyze basic-document basic-search">
+            <div id="toolbar-left">
+                <a class="mobile-druglist druglist-normal">Edit List</a>
+                <a class="mobile-druglist druglist-editing">Clear All</a>
+                <a class="mobile-search back-button" id="search-back">Back</a>
+                <a class="mobile-analyze back-button" id="analyze-back">Back</a>
+                <a class="mobile-document back-button">Back</a>
+            </div>
+            <div id="toolbar-middle">
+                <span class="mobile-druglist">Item List</span>
+                <span class="mobile-search">Add Item</span>
+                <span class="mobile-analyze">Analyzing...</span>
+                <span class="mobile-document"></span>
+            </div>
+            <div id="toolbar-right">
+                <a class="mobile-druglist druglist-normal" id="druglist-add">Add Item</a>
+                <a class="mobile-druglist druglist-editing">Done</a>
+                <a class="mobile-analyze"></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="desktop-druglist basic-druglist desktop-analyze basic-analyze desktop-search basic-search desktop-document basic-document druglist-normal">
+            <div class="sidebar-header">
+                <h3>Lexicomp&reg; Drug Interactions</h3>
+                <p>Add items to your list by searching below.</p>
+            </div>
+            <div class="search-field">
+                <input type="text" class="search-input" placeholder="Enter item name" />
+                <ul class="autoCompleteList utd-listView" style="display:none"></ul>
+            </div>
+            <div class="druglist-header"><h4>Item List</h4></div>
+            <div class="desktop-toolbar basic-toolbar">
+                <a class="new-list-button">Clear List</a> <a class="analyze-button analyze-disable">Analyze</a>
+            </div>
+            <div class="druglist-guidance">
+                <ul class="drugList utd-listView"></ul>
+                <div id="druglist-desk1">Display complete list of interactions for an individual item by clicking item name. <div id="druglist-desk2">Add another item to analyze for potential interactions.</div></div>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <div class="iv-disclaimer">NOTE: This tool does not address chemical compatibility related to I.V. drug preparation or administration.</div>
+            <a href="https://www.surveymonkey.com/r/XPSMMXT" target="_blank">Drug Interactions Feedback</a>
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="disclaimer" class="mobile-disclaimer basic-disclaimer desktop-disclaimer"></div>
+        <div id="disclaimer-content" style="display: none">
+            <h2 class="red-warning beta-label">
+                <p>
+                    This beta version is for testing only. Do not use in
+                    clinical settings!
+                </p>
+            </h2>
+            <h3>Welcome to <strong>Drug Interactions:</strong> A Drug-Drug, Drug-Herb, and Herb-Herb analysis tool, provided by Wolters Kluwer Clinical Drug Information utilizing Lexicomp clinical content.</h3>
+            <p>Lexi-Interact Online combines literature and scientific understanding of drug interactions throughout the world with a state-of-the-art electronic platform, providing an efficient way to help inform healthcare professionals about adverse drug events that otherwise can compromise the care of patients.</p>
+            <p>Review all interactions for a selected medication or enter a patient specific regimen to analyze for potential interactions. Additionally, you may select a drug interaction result to obtain specific information on Patient Management, Interacting Members, Risk Rating, References and more.</p>
+            <p>
+                <strong>Disclaimer:</strong> Use of this data solution is subject to the any applicable license agreement. Wolters Kluwer Clinical Drug Information makes reasonable
+                efforts to publish accurate summary information in its solutions. But users are advised that these solutions are intended only to supplement &mdash; not substitute for or replace &mdash; the knowledge and judgment of healthcare professionals. The information is published based upon publicly available sources generally viewed as reliable in the healthcare community. Wolters Kluwer Clinical Drug Information does not engage in any independent review, testing or study of any medication, medical device, condition, illness, injury, test, procedure, treatment, or therapy in connection with publication of the information. The information is not intended to explicitly or implicitly endorse any particular medication, medical device, test, procedure, treatment, or therapy as safe or effective for any particular patient or health condition.  Wolters Kluwer Clinical Drug Information assumes no responsibility or liability for errors or omissions of any kind in the information. Wolters Kluwer Clinical Drug Information expressly disclaims any liability for any loss or damage claimed to have resulted from the use of the information. By using this information, each such user of the information holds Wolters Kluwer Clinical Drug Information harmless from any such claims and indemnifies Wolters Kluwer Clinical Drug Information for any expenses incurred if any such claims are made. In no event shall Wolters Kluwer Clinical Drug Information be liable to any user or any third-party, including specifically any customer or patient of a user, for direct, special, indirect, incidental, or consequential damages. Wolters Kluwer Clinical Drug Information disclaims all warranties of any kind or nature, whether expressed or implied, including any warranty as to the quality, accuracy, comprehensiveness, currency, suitability, availability, compatibility, merchantability, and fitness for a particular purpose of the information.
+            </p>
+        </div>
+        <div id="disclaimer-analyze-content" style="display: none">
+            <p class="analyze-disclaimer"><strong>Disclaimer:</strong> Readers are advised that decisions regarding drug therapy must be based on the independent judgment of the clinician, changing information about a drug (eg, as reflected in the literature and manufacturer's most current product information), and changing medical practices.</p>
+        </div>
+        <div class="desktop-disclaimer basic-disclaimer disclaimer-button">
+            <a class="disclaimer-continue desktop-disclaimer basic-disclaimer onebutton">Continue</a>
+        </div>
+        <div class="mobile-search basic-search search-container">
+            <div id="search-field">
+                <input type="text" class="search-input" placeholder="Enter item name" autocomplete="off"
+                       autocapitalize="off"
+                       autocorrect="off" />
+            </div>
+            <ul class="autoCompleteList utd-listView"></ul>
+        </div>
+        <div class="mobile-druglist mobile-search">
+            <ul class="drugList utd-listView"></ul>
+        </div>
+        <div class="mobile-analyze">
+            <ul class="intList utd-listView"></ul>
+        </div>
+        <div class="desktop-analyze basic-analyze">
+            <table class="risk-table">
+                <tr>
+                    <td class="rating-group"><table class="inner-rating"><tr><td class="intRiskRating ratingX">X</td><td class="rating-desc">Avoid combination</td></tr></table></td>
+                    <td class="rating-group"><table class="inner-rating"><tr><td class="intRiskRating ratingC">C</td><td class="rating-desc">Monitor therapy</td></tr></table></td>
+                    <td class="rating-group"><table class="inner-rating"><tr><td class="intRiskRating ratingA">A</td><td class="rating-desc">No known interaction</td></tr></table></td>
+                </tr>
+                <tr>
+                    <td class="rating-group"><table class="inner-rating"><tr><td class="intRiskRating ratingD">D</td><td class="rating-desc">Consider therapy modification</td></tr></table></td>
+                    <td class="rating-group"><table class="inner-rating"><tr><td class="intRiskRating ratingB">B</td><td class="rating-desc">No action needed</td></tr></table></td>
+                    <td class="rating-group">
+                        <table class="inner-rating">
+                            <tr>
+                                <td class="key-morelink"><em>More about Risk Ratings</em></td>
+                                <td class="key-arrow">
+                                    <ul>
+                                        <li>
+                                            &#9660;
+                                            <ul>
+                                                <li id="desktop-riskRatings">
+                                                    <div class="mobile-riskrating">
+                                                        <ul class="intList utd-listView">
+                                                            <li class="intItem"><span class="intRiskRating ratingX">X</span><span class="intRiskRatingDescription"><strong>Avoid Combination</strong><br />Data demonstrate that the specified agents may interact with each other in a clinically significant manner. The risks associated with concomitant use of these agents usually outweigh the benefits. These agents are generally considered contraindicated.</span></li>
+                                                            <li class="intItem"><span class="intRiskRating ratingD">D</span><span class="intRiskRatingDescription"><strong>Consider Therapy Modification</strong><br />Data demonstrate that the two medications may interact with each other in a clinically significant manner. A patient-specific assessment must be conducted to determine whether the benefits of concomitant therapy outweigh the risks. Specific actions must be taken in order to realize the benefits and/or minimize the toxicity resulting from concomitant use of the agents. These actions may include aggressive monitoring, empiric dosage changes, choosing alternative agents.</span></li>
+                                                            <li class="intItem"><span class="intRiskRating ratingC">C</span><span class="intRiskRatingDescription"><strong>Monitor Therapy</strong><br />Data demonstrate that the specified agents may interact with each other in a clinically significant manner. The benefits of concomitant use of these two medications usually outweigh the risks. An appropriate monitoring plan should be implemented to identify potential negative effects. Dosage adjustments of one or both agents may be needed in a minority of patients.</span></li>
+                                                            <li class="intItem"><span class="intRiskRating ratingB">B</span><span class="intRiskRatingDescription"><strong>No Action Needed</strong><br />Data demonstrate that the specified agents may interact with each other, but there is little to no evidence of clinical concern resulting from their concomitant use.</span></li>
+                                                            <li class="intItem"><span class="intRiskRating ratingA">A</span><span class="intRiskRatingDescription"><strong>No Known Interaction</strong><br />Data have not demonstrated either pharmacodynamic or pharmacokinetic interactions between the specified agents</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                <tr>
+            </table>
+            <div class="intCountBar"><span class="intCount"></span><a href="" onclick="window.print(); return false;" class="printButton desktop-analyze">Print</a></div>
+            <ul class="intList utd-listView"></ul>
+        </div>
+        <div id="doc" class="mobile-document basic-document desktop-document">
+			<div class="desktop-document" style="margin: 0">
+				<div style="float: left"><a style="color: blue;text-decoration: underline;" onclick="$$.ui('analyze');">Back</a></div>
+				<div style="text-align: center; font-weight: bold;">Interaction Details</div>
+			</div>
+			<a href="" onclick="window.print(); return false;" class="printButton desktop-document">Print</a>
+			<div id="docContents"></div>
+		</div>
+    </div>
+    <div class="clear:both;"></div>
+    <div id="footer-container" class="mobile-disclaimer mobile-druglist basic-disclaimer desktop-disclaimer">
+        <div id="actions">
+            <div class="mobile-disclaimer onebutton">
+                <a class="disclaimer-continue">Continue</a>
+            </div>
+            <div class="mobile-druglist onebutton" id="druglist-step3">
+                <a class="analyze-button">Analyze</a>
+            </div>
+            <div class="mobile-druglist" id="druglist-step12">
+                <div id="druglist-step2">Add another item to analyze for potential interactions</div>
+            </div>
+            <div class="mobile-document">
+            </div>
+        </div>
+    </div>
+    <script src="files/jquery.js"></script>
+    <script src="files/di_vendors.js"></script>
+    <!--[if lt IE 8]> <script src="files/di_json2.js"></script> <![endif]-->
+    <script src="files/di_script.js"></script>
+    <script src="drugs-interactions/drug-interactions/ds.js"></script>
+    <script src="drugs-interactions/drug-interactions/dis.js"></script>
+    <script src="drugs-interactions/drug-interactions/is.js"></script>
+</body>
+</html>

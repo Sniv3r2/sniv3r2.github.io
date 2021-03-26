@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["ft"]={"title":null,"keywords":{"df":0,"docs":{},"y":{"df":0,"docs":{},"7":{"df":0,"docs":{},"2":{"df":0,"docs":{},"0":{"df":0,"docs":{"5516":1.4142135623730952}}}}},"o":{"df":0,"docs":{"7683":1.0,"11919":1.0}}}}

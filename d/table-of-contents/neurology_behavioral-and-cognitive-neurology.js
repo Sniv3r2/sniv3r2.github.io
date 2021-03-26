@@ -1,0 +1,1 @@
+var data={"name":"Behavioral and cognitive neurology","type":"SECTION","numTopics":"11,000","numSpecialties":"over 22","items":[{"name":"The mental status examination in adults","type":"TOPIC","languageCode":"EN","url":"topic.htm?path=the-mental-status-examination-in-adults"}]}

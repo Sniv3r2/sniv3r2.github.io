@@ -1,0 +1,1 @@
+var data={"name":"General psychiatry","type":"SECTION","numTopics":"11,000","numSpecialties":"over 22","items":[{"name":"Assessment of decision-making capacity in adults","type":"TOPIC","languageCode":"EN","url":"topic.htm?path=assessment-of-decision-making-capacity-in-adults"}]}

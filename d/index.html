@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="d/files/favicon.ico" type="image/x-icon">
+    <title>UpToDate 2018</title>
+    <link rel="stylesheet" href="d/files/home.css">
+    <script language="javascript" type="text/javascript" src="d/files/script.js"></script>
+    <script type="text/javascript">
+        var rootElement;
+
+        var isDesktop = true;
+
+        window.addEventListener("load", function () {
+            rootElement = document.getElementById("appContainer");
+
+            initSize();
+
+            adjustForSize();
+
+            setLinks();
+        });
+        window.addEventListener("resize", function () {
+            adjustForSize();
+        });
+
+        function adjustForSize() {
+            isDesktop = chkIsDesktop();
+            rootElement.classList.toggle("isDesktop", isDesktop);
+        };
+
+        function onTextInput(element, event) {
+            if (event.charCode == 13) {
+                submitSearch(element);
+            }
+        }
+
+        function submitSearch(e) {
+            var s = e.value;
+            doSearch(s, "d/");            
+        };
+
+        function clearSearch(e) {
+            e.value = "";
+        };
+    </script>
+</head>
+<body>
+    <noscript>It seems to us that you have your JavaScript disabled on your browser. JavaScript is required in order for the site to behave correctly.  Please enable JavaScript to use the site.</noscript>
+    <div id="appContainer">
+        <div id="header">
+            <div id="utd-menu" class="utd-abs-white-carbon">
+                <div id="utd-menu-content">
+                    <div class="utd-menu-tier1">
+                        <a class="utd-logo">UpToDate®</a>
+                        <img class="flogo" src="d/files/flogo.png">
+                    </div>
+                    <div class="utd-menu-tier3">
+                        <div class="search-bar-ac-unit">
+                            <div class="search-bar-container">
+                                <div class="search-bar">
+                                    <span class="search-icon"></span>
+                                    <div class="utdBarSearchCtrlContainer">
+                                        <input id="tbSearch1" type="text" spellcheck="false" class="utdBarSearchCtrl term searchTerm" placeholder="Search UpToDate" autocomplete="off" autocapitalize="off" autocorrect="off" required="" onkeypress="onTextInput(this, event);">
+                                    </div>
+                                    <span id="clearSearch" outer-class="search-clear" onclick="clearSearch(document.getElementById('tbSearch1'));">
+                                        <i class="fa fa-times-circle"></i>
+                                    </span>
+                                    <span class="newsearch-submit" onclick="submitSearch(document.getElementById('tbSearch1'));"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="utd-menu utd-menu-signin">
+                            <li><img class="flogoM" src="d/files/flogo.png"></li>
+
+                        </ul>
+                        <ul class="utd-menu utd-menu-content">
+                            <li><span class="sep"></span><a href="d/di.htm"><span>Drug Interactions</span></a><i></i></li>
+                            <li><a href="d/toc.htm?path=calculators/categorized"><span>Calculators</span></a><i></i></li>
+                            <li><span class="sep"></span><a href="d/topic.htm?path=practice-changing-updates"><span>PCUs</span></a><i></i></li>
+                            <li><span class="sep"></span><a href="d/toc.htm?path=whats-new"><span>What's New</span></a><i></i></li>
+                            <li><span class="sep"></span><a href="d/toc.htm?path=patient-education"><span>Patient Education</span></a><i></i></li>
+                            <li class="firstnav"><a href="d/toc.htm"><span>Contents</span></a><i></i></li>
+                        </ul>
+                    </div>
+
+                </div>
+				<div class="mob-version">				
+					App Version: 2.0<br>
+					Update Date: 2018/04
+				</div>
+            </div>
+
+        </div>
+
+        <div id="utd-main">
+            <div id="new-search">
+                <div class="new-search-box">
+                    <h3><span>Search UpToDate</span></h3>
+                    <div>
+                        <div class="search-bar-ac-unit">
+                            <div class="search-bar-container">
+                                <div class="search-bar">
+                                    <span class="search-icon"></span>
+                                    <div class="utdBarSearchCtrlContainer">
+                                        <input id="tbSearch2" type="text" spellcheck="false" class="utdBarSearchCtrl term searchTerm" autocomplete="off" autocapitalize="off" autocorrect="off" required="" onkeypress="onTextInput(this, event);">
+                                    </div>
+                                    <span class="search-clear" id="clearSearch" control="" outer-class="search-clear" onclick="clearSearch(document.getElementById('tbSearch2'));">
+                                        <i class="fa fa-times-circle">
+                                        </i>
+                                    </span>
+                                    <span class="newsearch-submit" onclick="submitSearch(document.getElementById('tbSearch2'));"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+
+        <footer id="utdFooter" class="displayed" style="margin-top: 250px;">
+            <div>
+                <span>
+                    <p class="copyright">©2018 UpToDate, Provided by OpenMed.<br>App Version: 2.0, Update Date: 2018/04</p>					
+                </span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

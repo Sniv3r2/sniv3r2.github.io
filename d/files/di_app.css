@@ -1,0 +1,290 @@
+@keyframes footerFadeIn{from{opacity:0}
+to{opacity:1}
+}
+@-moz-keyframes footerFadeIn{from{opacity:0}
+to{opacity:1}
+}
+@-webkit-keyframes footerFadeIn{from{opacity:0}
+to{opacity:1}
+}
+@-ms-keyframes footerFadeIn{from{opacity:0}
+to{opacity:1}
+}
+@-o-keyframes footerFadeIn{from{opacity:0}
+to{opacity:1}
+}
+ul.utd-listView{list-style-type:none;margin:0;padding:0}
+ul.utd-listView li{padding:0 15px 5px 5px;margin-left:10px;border-bottom:1px solid #eaeaea;line-height:1.2em;font-size:.9em}
+ul.utd-listView li:last-child{border-bottom:none}
+ul.utd-listView li.touchdown{background:#eee}
+ul.utd-listView li .outlineToggle{display:none}
+ul.utd-listView li a{color:#00905a;display:inline-block;text-decoration:none;width:100%;padding:16px 0 10px}
+ul.utd-listView li a:hover{text-decoration:underline}
+ul.utd-listView li ul{margin:0 0 10px;list-style-type:none;padding:0}
+ul.utd-listView li ul li{padding:10px 25px 10px 10px;border:none}
+ul.utd-listView li ul li a{font-size:.9em;color:#0081c6;padding:0}
+ul.graphicsResults li{display:block;border-bottom:0;float:left;width:145px;margin:10px 5px;padding:0!important}
+ul.graphicsResults li span.image{display:inline-block;width:145px;height:145px;background:#fff;-webkit-box-shadow:4px 4px 4px 0 #aaa;-moz-box-shadow:4px 4px 4px 0 #aaa;box-shadow:4px 4px 4px 0 #aaa;border:1px solid #e8e8e8}
+ul.graphicsResults li span.image a{display:block;width:145px;height:145px;background-position:50% 50%;background-repeat:no-repeat;outline:0;padding:0}
+ul.graphicsResults li span.title{font-size:11px;display:block;height:44px;overflow:hidden;font-family:Verdana,Arial,sans-serif;margin-top:5px;line-height:14px;cursor:pointer;color:#00905a}
+ul li span.image .play_icon{background:url(graphic/icn_play.png) no-repeat;height:25px;width:36px;margin:-85px 55px;cursor:pointer}
+dl.utd-listView{padding:0 15px}
+dl.utd-listView dt{margin:25px 0 10px;font-size:.95em;font-weight:500;line-height:1.1em;color:#111}
+dl.utd-listView dl{list-style-type:none;margin:0 0 15px;padding:0}
+dl.utd-listView dl dt{margin:25px 0 10px;font-weight:400;padding:0 0 0 7px;color:#333}
+dl.utd-listView dd{padding:0 15px 5px 5px;margin-left:10px;border-bottom:1px solid #eaeaea;line-height:1.2em;font-size:.9em}
+dl.utd-listView dd.last-dd,dl.utd-listView dd:last-child{border-bottom:none;margin-bottom:40px}
+dl.utd-listView dd.touchdown{background:#eee}
+dl.utd-listView dd a{color:#00905a;display:inline-block;text-decoration:none;padding:16px 0 10px}
+dl.utd-listView dd a:hover{text-decoration:underline}
+@media only screen and (min-width:375px){ul.graphicsResults li{padding:0 0 0 15px!important}
+}
+@media only screen and (min-width:414px){ul.graphicsResults li{margin:10px 15px;padding:0 0 0 15px!important}
+}
+.isTablet .utd-listView dd,.isTablet .utd-listView li{font-size:.95em}
+.isTablet ul.graphicsResults li{margin:10px 13px;padding:0 0 0 15px!important}
+@media only screen and (min-width:768px){.utd-listView dd,.utd-listView li{font-size:.95em}
+ul.graphicsResults li{margin:10px 13px;padding:0 0 0 15px!important}
+.isDesktop ul.utd-listView{list-style-type:none;margin:20px 0 0;padding:0;max-width:90%;font-size:.9em}
+.isDesktop ul.utd-listView li{padding:15px;border-bottom:none;font-size:1em;line-height:1.2em}
+.isDesktop ul.utd-listView li a{max-width:600px;padding:0}
+.isDesktop ul.utd-listView li ul{margin:2px 0}
+.isDesktop ul.utd-listView li ul li{margin:0;padding:2px 20px}
+.isDesktop ul.utd-listView li ul li a{cursor:pointer}
+}
+@media only screen and (min-width:998px){.isDesktop ul.utd-listView li{padding-left:45px}
+}
+.utd-logo{width:40px;height:40px;display:block;background-size:40px 40px!important;background:url(utd-menu-icon2.png) 50% 50% no-repeat;-webkit-background-size:40px 40px}
+.largeSize .utd-logo{width:115px;height:28px;background-size:115px 28px!important;background:url(utd-logo-desktop.png) 50% 50% no-repeat;-webkit-background-size:115px 28px}
+.beta-label{display:none;color:red}
+.beta .beta-label{display:inline}
+.init,body .mobile-analyze,body .mobile-disclaimer,body .mobile-document,body .mobile-druglist,body .mobile-search,body.disableNavBar #header{display:none}
+.beta-label p{text-align:center;line-height:1.2em!important;background:red;color:#fff;padding:10px;font-size:.7em!important}
+.error{border:1px solid #0081c6!important;border-radius:4px!important;margin:40px!important;padding:15px!important;text-align:center!important;color:#0081c6!important;font-size:1em!important;background:#fff!important;font-weight:700}
+html.landscape-layout{position:absolute;width:100%;height:100%;overflow:hidden}
+body{background:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px}
+@media screen{.largeSize .desktop-analyze .analyze-disclaimer strong,.largeSize .desktop-riskrating .analyze-disclaimer strong,.largeSize h4,.smallSize .mobile-analyze .analyze-disclaimer strong,.smallSize .mobile-riskrating .analyze-disclaimer strong{text-transform:uppercase}
+.smallSize{width:100%;height:100%;overflow:hidden}
+.smallSize #header-container{display:block;position:absolute;top:0;left:0;right:0;height:96px;box-shadow:0 2px 2px rgba(0,0,0,.05);-webkit-user-select:none;z-index:2}
+#ui-disclaimer .smallSize #header-container{height:48px;box-shadow:none}
+.disableNavBar.smallSize #header-container{height:48px}
+.smallSize #header{height:48px;background:#00905a;overflow:hidden;position:absolute;top:0;left:0;right:0;box-shadow:inset 0 -3px 3px rgba(0,0,0,.1)}
+.smallSize #header .utd-logo{position:absolute;left:10px;top:4px}
+.smallSize #header .lexi-tab{position:absolute;right:15px;bottom:0;background:#fff;border-radius:2px 2px 0 0;padding:8px 12px;font-size:.8em;box-shadow:0 -3px 3px rgba(0,0,0,.1)}
+.smallSize #toolbar{height:48px;background:#fff;overflow:hidden;position:absolute;top:48px;left:0;right:0;font-size:.95em}
+.disableNavBar.smallSize #toolbar{top:0}
+.smallSize #toolbar #toolbar-left{position:absolute;top:0;bottom:0;left:0;text-align:left;z-index:2}
+.smallSize #toolbar #toolbar-left a{color:#0081c6;line-height:48px;text-decoration:none;display:inline-block}
+.smallSize #toolbar #toolbar-left .druglist-normal{display:block;width:48px;height:48px;background-size:22px 22px!important;background:url(minus.png) 50% 50% no-repeat;-webkit-background-size:22px 22px;color:transparent}
+.smallSize #toolbar #toolbar-left .druglist-editing,.state-druglist-editing .smallSize #toolbar #toolbar-left .druglist-normal{display:none!important}
+.state-druglist-editing .smallSize #toolbar #toolbar-left .druglist-editing{display:inline-block!important;padding-left:20px}
+.smallSize #toolbar #toolbar-left .back-button{background-size:13px 21px!important;background:url(back.png) 10px 50% no-repeat;-webkit-background-size:13px 21px;padding-left:30px;margin-left:0}
+.smallSize #toolbar #toolbar-middle{position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;line-height:48px;z-index:1;font-weight:500}
+.smallSize #toolbar #toolbar-right{position:absolute;top:0;bottom:0;right:0;text-align:right;z-index:2}
+.smallSize #toolbar #toolbar-right a{color:#0081c6;line-height:48px;text-decoration:none}
+.smallSize #toolbar #toolbar-right .druglist-normal{display:block;width:60px;height:48px;background-size:22px 22px!important;background:url(add.png) 50% 50% no-repeat;-webkit-background-size:22px 22px;color:transparent}
+.smallSize #toolbar #toolbar-right .druglist-editing,.state-druglist-editing .smallSize #toolbar #toolbar-right .druglist-normal{display:none!important}
+.state-druglist-editing .smallSize #toolbar #toolbar-right .druglist-editing{display:inline-block!important;padding-right:20px}
+.smallSize #toolbar #toolbar-right .mobile-analyze{display:block;width:48px;height:48px;background-size:22px 22px!important;background:url(info.png) 50% 50% no-repeat;-webkit-background-size:22px 22px}
+.smallSize #sidebar{display:none}
+.smallSize #main-container>div{position:absolute;top:96px;bottom:0;left:0;right:0;overflow:auto;padding-top:14px;-webkit-overflow-scrolling:touch;z-index:1;background:#e2e2e2}
+.disableNavBar.smallSize #main-container>div{top:48px}
+.smallSize #main-container>div .utd-listView{-webkit-user-select:none;overflow:hidden;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.1);max-width:100%}
+.smallSize #main-container>div .utd-listView li{padding-left:15px;margin-left:0}
+.smallSize #main-container>div div.hasItems{padding:6px 10px 0}
+.smallSize #main-container>div div.hasItems p{display:table-cell}
+.smallSize #main-container>div div.noItems{display:table;width:100%;height:100%}
+.smallSize #main-container>div div.noItems p{display:table-cell;line-height:.9em;color:#888;vertical-align:middle;text-align:center;padding-bottom:55px;padding-left:10px}
+.smallSize #main-container>div div.noItems p .plus{font-size:1.5em;font-weight:300;padding:0 2px}
+.smallSize #main-container>div div.iv-disclaimer-mobile-style{color:red;font-size:.7em;line-height:1em}
+.smallSize #main-container>div div.iv-disclaimer-mobile-bottom{position:absolute;bottom:0;vertical-align:bottom;text-align:left;padding:60px 1em 0}
+.smallSize #main-container .mobile-disclaimer{top:48px;bottom:64px;background:#fff}
+.disableNavBar.smallSize #main-container .mobile-disclaimer{top:0}
+.smallSize #main-container .mobile-disclaimer h3{margin:10px 15px;text-align:center;font-size:.9em}
+.smallSize #main-container .mobile-disclaimer .red-warning{color:red}
+.smallSize #main-container .mobile-disclaimer p{margin:10px 15px;font-size:.75em;line-height:1.4em}
+.smallSize #main-container .mobile-disclaimer p.version{font-size:.6em;padding-top:20px}
+.smallSize #main-container .mobile-search.search-container{z-index:2;background:rgba(0,0,0,.65)}
+.smallSize #main-container .mobile-search #search-field{background:#ddd;position:absolute;top:0;left:0;right:0;height:48px;box-shadow:inset 0 1px 1px rgba(0,0,0,.1)}
+.smallSize #main-container .mobile-search #search-field .search-input{background:#fff;border:none;-webkit-appearance:none;display:block;width:93%;margin:8px auto;line-height:24px;font-size:15px;padding:4px;height:24px;overflow:hidden;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.smallSize #main-container .mobile-search .autoCompleteList{position:absolute;top:48px;bottom:0;left:0;right:0;overflow:auto;-webkit-overflow-scrolling:touch;padding-bottom:64px;background:#fff;margin-top:0}
+.smallSize #main-container .mobile-search .autoCompleteList li{cursor:pointer}
+.smallSize #main-container .mobile-search .autoCompleteList li.current-ac{background:#eee}
+.smallSize #main-container .mobile-search .autoCompleteList li.autoCompleteNextPage{text-align:center}
+.smallSize #main-container .mobile-search .autoCompleteList li.autoCompleteNextPage a{display:inline-block;border:1px solid #0081c6;border-radius:4px;text-align:center;color:#0081c6;margin:20px auto;padding:0 20px;width:auto;line-height:34px;font-size:.9em}
+.smallSize #main-container .mobile-search .autoCompleteList li.autoCompleteLabel{color:#bbb;cursor:default}
+.smallSize #main-container .mobile-search .autoCompleteList li.autoCompleteLabel div{font-size:.85em;font-weight:700}
+.smallSize #main-container .mobile-druglist .drugList li{position:relative;margin-right:10px;background-size:2em 2em!important;background:url(angle-right.png) 100% 50% no-repeat;-webkit-background-size:2em 2em;border-bottom:1px solid #eaeaea}
+.smallSize #main-container .mobile-druglist .drugList li a{padding-right:25px}
+.state-druglist-editing .smallSize #main-container .mobile-druglist .drugList li{background:0 0}
+.state-druglist-editing .smallSize #main-container .mobile-druglist .drugList li a{padding-left:32px}
+.smallSize #main-container .mobile-druglist .drugList li a.removedrug{position:absolute;left:5px;top:0;display:none;width:35px;height:32px;background-size:22px 22px!important;background:url(remove.png) 8px 50% no-repeat;-webkit-background-size:22px 22px;z-index:2;padding:8px 0 10px;opacity:.8;text-indent:-99999px}
+.state-druglist-editing .smallSize #main-container .mobile-druglist .drugList li a.removedrug{display:block}
+.smallSize #main-container .analyze-visible{margin-bottom:66px}
+.state-druglist-editing .smallSize #main-container .analyze-visible{margin-bottom:0}
+.smallSize .mobile-riskrating{margin:-15px}
+.smallSize .mobile-analyze .analyze-disclaimer,.smallSize .mobile-riskrating .analyze-disclaimer{font-size:.7em;line-height:1.1em;padding:10px;margin:0;color:#666}
+.smallSize .mobile-analyze #analyze-copyright,.smallSize .mobile-riskrating #analyze-copyright{font-size:.7em;padding:0 10px 10px;margin:0;color:#666}
+.smallSize .mobile-analyze .intList .intItem,.smallSize .mobile-riskrating .intList .intItem{position:relative;margin-left:0;padding-right:30px}
+#ui-analyze .smallSize .mobile-analyze .intList .intItem,#ui-analyze .smallSize .mobile-riskrating .intList .intItem{margin-right:10px;background-size:2em 2em!important;background:url(angle-right.png) 100% 50% no-repeat;-webkit-background-size:2em 2em}
+.smallSize .mobile-analyze .intList .intItem .intDrug,.smallSize .mobile-riskrating .intList .intItem .intDrug{display:block;padding-left:50px}
+.smallSize .mobile-analyze .intList .intItem .intRiskRatingDescription,.smallSize .mobile-riskrating .intList .intItem .intRiskRatingDescription{display:block;padding:10px 0 10px 50px}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating,.smallSize .mobile-riskrating .intList .intItem .intRiskRating{position:absolute;top:0;left:0;bottom:0;width:38px;text-align:center;font-size:24px;font-weight:700;line-height:64px;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.1)}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating.ratingX,.smallSize .mobile-riskrating .intList .intItem .intRiskRating.ratingX{background:red}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating.ratingD,.smallSize .mobile-riskrating .intList .intItem .intRiskRating.ratingD{background:#ff8d00}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating.ratingC,.smallSize .mobile-riskrating .intList .intItem .intRiskRating.ratingC{background:#f8d11c}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating.ratingB,.smallSize .mobile-riskrating .intList .intItem .intRiskRating.ratingB{background:#f8f8f8;color:#7ed321;text-shadow:1px 1px 0 #fff}
+.smallSize .mobile-analyze .intList .intItem .intRiskRating.ratingA,.smallSize .mobile-riskrating .intList .intItem .intRiskRating.ratingA{background:#f8f8f8;color:#21B4D3;text-shadow:1px 1px 0 #fff}
+.smallSize #doc{font-size:.9em;padding:15px 15px 30px;background:#fff!important}
+.smallSize #actions{background:#eee;position:absolute;bottom:0;left:0;right:0;z-index:2;border-top:1px solid #e0e0e0;box-shadow:0 0 4px rgba(0,0,0,.15)}
+.state-druglist-editing .smallSize #actions{display:none}
+.smallSize #actions .onebutton{height:64px}
+.smallSize #actions .onebutton a{background:#0081c6;color:#fff;font-weight:500;font-size:1em;text-decoration:none;text-align:center;line-height:40px;position:absolute;bottom:12px;left:16px;right:16px;border-radius:4px}
+.smallSize #actions #druglist-step12{height:auto;padding:0 16px}
+.smallSize #actions #druglist-step12 #druglist-step1{text-align:center;margin:4px 16px;display:block}
+.smallSize #actions #druglist-step12 #druglist-step1 a{font-size:.9em;color:#00905a}
+.smallSize #actions #druglist-step12 #druglist-step2{display:block;text-align:center;text-transform:uppercase;color:#777;background:#ccc;border-radius:4px;margin:8px auto;padding:8px;font-size:.85em;max-width:450px}
+.mediumSize #main-container .disclaimer{margin:0 auto;padding:40px 0;max-width:600px;font-size:1.2em}
+.mediumSize #main-container .disclaimer h3{margin-bottom:20px}
+.mediumSize ul.utd-listView li{line-height:2em}
+.mediumSize .riskrating #intList .intItem .intRiskRatingDescription{line-height:1.4em}
+.mediumSize .mobile-riskrating .utd-listView{margin-top:0}
+.mediumSize .mobile-riskrating .utd-listView .intItem{border-bottom:1px solid #eaeaea}
+.mediumSize #actions .onebutton a{left:20%;right:20%}
+.mediumSize #actions #druglist-step12 #druglist-step2{margin:8px auto}
+.largeSize body,.largeSize html{height:100%}
+.largeSize a{cursor:pointer}
+.largeSize #header-container{height:60px}
+.largeSize #header{position:fixed;height:60px;background:#fff;border-bottom:7px solid #00905a;top:0;right:0;left:0;z-index:500}
+.largeSize #header .utd-logo{position:absolute;top:20px;left:20px}
+.largeSize #header .lexi-tab{position:absolute;right:25px;bottom:-7px;background:#fff;border-radius:2px 2px 0 0;padding:8px 12px;font-size:.9em;box-shadow:0 -3px 3px rgba(0,0,0,.1)}
+.largeSize h2,.largeSize h3{font-size:1.1em;font-weight:700}
+.largeSize .druglist-header,.largeSize .sidebar-header{background:#f6f6f8;box-shadow:0 5px 3px #ccc;padding:0 10px;border-bottom:1px solid #cdcdd1}
+.largeSize h2{color:#000;text-align:left}
+.largeSize h3{color:#00905a;text-align:center}
+.largeSize h4{font-size:.8em;text-align:center;color:#656565;letter-spacing:1px}
+.largeSize .druglist-header p,.largeSize .sidebar-header p{font-size:.8em;color:#000}
+.largeSize .sidebar{width:350px;position:fixed;left:0;top:67px;bottom:0;background:#f6f6f8;border-right:1px solid #cdcdd1}
+#ui-disclaimer .largeSize .sidebar{display:none}
+.largeSize .iv-disclaimer{border-bottom:1px solid #cdcdd1;color:red;padding:7px 10px;margin-bottom:5px;text-align:center}
+.largeSize .desktop-search .search-field{background:#ddd;height:52px;box-shadow:inset 0 1px 1px rgba(0,0,0,.1);position:relative}
+.largeSize .desktop-search .search-input{background:#fff;margin:8px;line-height:24px;font-size:.9em;padding:5px 5px 5px 16px;height:25px;overflow:hidden;border-radius:6px;position:absolute;left:2px;right:2px;top:0;display:block;width:307px;border:1px solid #fff;outline:0}
+.largeSize .desktop-search .search-input:focus{border:1px solid #0081c6}
+.largeSize .desktop-search .autoCompleteList{position:absolute;top:24px;left:9px;right:11px;border-radius:8px;padding-bottom:64px;background:#fff;max-width:100%!important;overflow:auto;box-shadow:0 4px 8px rgba(0,0,0,.25);max-height:350px;z-index:1}
+.largeSize .desktop-search .autoCompleteList li{cursor:pointer;padding:10px 5px 10px 18px!important;border-bottom:1px solid #eee!important;margin-left:0}
+.largeSize .desktop-search .autoCompleteList li:hover{background:#f4f4f4}
+.largeSize .desktop-search .autoCompleteList li.current-ac{background:#0081c6}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteNextPage:hover,.largeSize .desktop-search .autoCompleteList li.error:hover{background:#fff}
+.largeSize .desktop-search .autoCompleteList li.current-ac a{color:#fff}
+.largeSize .desktop-search .autoCompleteList li.error{border:1px solid #0081c6!important;cursor:default}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteNextPage{text-align:center}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteNextPage a{display:inline-block;border:1px solid #0081c6;border-radius:4px;text-align:center;color:#0081c6;margin:20px auto;padding:0 20px;width:auto;line-height:34px;font-size:.9em}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteNextPage a:hover{background:#f4f4f4}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteLabel{color:#bbb;cursor:default}
+.largeSize .desktop-search .autoCompleteList li.autoCompleteLabel div{font-weight:700;font-size:.85em}
+.largeSize .desktop-toolbar{background:#ddd;border-bottom:1px solid #ccc;height:40px}
+.largeSize .desktop-toolbar .new-list-button{background:#fefefe;border-radius:4px;width:25%;color:#000;font-size:.9em;text-align:center;padding:5px 10px;text-decoration:none;border:1px solid #ddd;margin:7px 10px;float:left}
+.largeSize .desktop-toolbar .analyze-button{background:#1b7dff;border-radius:4px;width:30%;color:#fff;font-size:.9em;text-align:center;padding:5px 10px;text-decoration:none;margin:7px 10px;float:right}
+.largeSize .desktop-toolbar .analyze-button.analyze-disable{background:#bbb;color:#ddd;cursor:default}
+.largeSize .hasItems,.largeSize .iv-disclaimer-mobile-bottom,.largeSize .noItems{display:none}
+.largeSize .desktop-druglist{display:block}
+.largeSize .druglist-editing,[misc=editing] .largeSize .desktop-druglist,[misc=editing] .largeSize .druglist-normal{display:none!important}
+.largeSize .druglist-normal{background:#f6f6f8}
+[misc=editing] .largeSize .druglist-editing{display:inline!important}
+.largeSize .druglist-editing .desktop-analyze{display:block}
+.largeSize .drugList{max-width:none!important;margin-top:0!important;max-height:600px;top:230px;width:350px;left:0;right:0;bottom:76px;overflow-y:auto}
+.largeSize .drugListItem{border-bottom:1px solid #cdcdd1!important;padding:10px 0;list-style-type:none;background:#fff;margin-left:0;position:relative}
+.largeSize .drugListItem a{text-decoration:underline}
+.largeSize .drugListItem a.removedrug{position:absolute;top:13px;left:15px;height:15px;width:22px;border-radius:50px;color:#fff;background:#ceced2;text-decoration:none;text-align:center;padding:3px 0 5px;line-height:15px}
+.largeSize .drugListItem a.drugname{text-decoration:underline}
+.largeSize .sidebar-footer{background:#fefefe;border-top:1px solid #cdcdd1;padding-top:5px;position:absolute;bottom:0;right:0;height:44px;width:100%;text-align:center;font-size:.8em}
+.largeSize .sidebar-footer a{color:#00905a; display: none}
+.largeSize .druglist-guidance{position:relative}
+.largeSize #druglist-desk1{padding:5px 15px;text-align:center;font-size:.8em;color:#575757;position:relative;bottom:0}
+.largeSize #druglist-desk1 #druglist-desk2{display:inline}
+.largeSize a.printButton{float:right;font-size:12px;font-weight:400;color:#0081c6;text-decoration:none;min-height:0}
+.largeSize a.printButton:hover{text-decoration:underline}
+.largeSize #main-container>div{overflow:auto;padding:0 0 0 350px}
+.largeSize #main-container>div .utd-listView{-webkit-user-select:none;overflow-x:hidden}
+.largeSize #main-container .desktop-document{margin:25px}
+.largeSize #main-container #disclaimer{margin:100px 18% 0;padding:25px;left:0;right:0;border:1px solid #ccc}
+.largeSize #main-container #disclaimer h3{margin:10px 15px;text-align:center;font-size:.9em}
+.largeSize #main-container #disclaimer .red-warning{color:red}
+.largeSize #main-container #disclaimer p{margin:10px 15px;font-size:.75em;line-height:1.5em}
+.largeSize .desktop-analyze,.largeSize .desktop-riskrating{min-height:600px}
+.largeSize .desktop-analyze .risk-table,.largeSize .desktop-riskrating .risk-table{width:65%;margin:30px auto 15px;min-width:620px;max-width:800px}
+.largeSize .desktop-analyze .rating-group,.largeSize .desktop-riskrating .rating-group{border:1px solid #ccc;width:30%;padding:0;margin:0}
+.largeSize .desktop-analyze .rating-group tr,.largeSize .desktop-riskrating .rating-group tr{height:35px}
+.largeSize .desktop-analyze .inner-rating,.largeSize .desktop-riskrating .inner-rating{width:100%}
+.largeSize .desktop-analyze .inner-rating .intRiskRating,.largeSize .desktop-riskrating .inner-rating .intRiskRating{width:25px;font-size:1.1em;font-weight:700;text-align:center}
+.largeSize .desktop-analyze .inner-rating .rating-desc,.largeSize .desktop-riskrating .inner-rating .rating-desc{padding-left:10px;font-size:.8em}
+.largeSize .desktop-analyze .inner-rating .key-morelink,.largeSize .desktop-riskrating .inner-rating .key-morelink{width:90%;padding-left:10px;font-size:.8em}
+.largeSize .desktop-analyze .inner-rating .key-arrow,.largeSize .desktop-riskrating .inner-rating .key-arrow{background-color:#e2e2e2;width:10%;margin:0;text-align:center}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul{position:relative;z-index:397;text-align:left;margin:0;padding:0}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li{list-style:none;padding:0;border:0;color:#000;line-height:35px;text-align:center;font-size:.8em}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li:hover,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li:hover{position:relative;z-index:399;cursor:default}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li>ul,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li>ul{visibility:hidden;position:absolute;top:100%;right:-2px;z-index:398;width:500px;background:#fff;border:5px solid #ccc;padding:0;font-size:.8em;margin-top:-1px;overflow-y:auto}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li>ul>li,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li>ul>li{text-align:left;line-height:16px}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li:hover>ul,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li:hover>ul{visibility:visible}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li:hover>ul .intList,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li:hover>ul .intList{margin:0}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li:hover>ul .intRiskRating,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li:hover>ul .intRiskRating{margin-left:0}
+.largeSize .desktop-analyze .inner-rating .key-arrow>ul>li:hover>ul .intRiskRatingDescription,.largeSize .desktop-riskrating .inner-rating .key-arrow>ul>li:hover>ul .intRiskRatingDescription{padding:8px 10px 8px 50px;font-size:1.2em;line-height:1.2em}
+.largeSize .desktop-analyze .intCountBar,.largeSize .desktop-riskrating .intCountBar{padding:25px 50px 0;margin-bottom:15px;font-weight:700}
+.largeSize .desktop-analyze .intCountBar select,.largeSize .desktop-riskrating .intCountBar select{float:right}
+.largeSize .desktop-analyze .intList,.largeSize .desktop-riskrating .intList{max-width:none}
+.largeSize .desktop-analyze .intList.noInteractions,.largeSize .desktop-riskrating .intList.noInteractions{border:1px solid #0081c6;border-radius:4px;text-align:center;color:#0081c6}
+.largeSize .desktop-analyze .intList .intItem,.largeSize .desktop-riskrating .intList .intItem{position:relative;padding:7px 0!important;margin-left:0;border-top:1px solid #e2e2e2;list-style-type:none}
+[ui=analyze] .largeSize .desktop-analyze .intList .intItem,[ui=analyze] .largeSize .desktop-riskrating .intList .intItem{margin-right:10px;background-size:2em 2em!important;background:url(angle-right.png) 100% 50% no-repeat;-webkit-background-size:2em 2em}
+.largeSize .desktop-analyze .intList .intItem .intDrug,.largeSize .desktop-riskrating .intList .intItem .intDrug{display:block;padding-left:100px}
+.largeSize .desktop-analyze .intList .intItem .intRiskRatingDescription,.largeSize .desktop-riskrating .intList .intItem .intRiskRatingDescription{display:block;padding:10px 0 10px 50px}
+.largeSize .desktop-analyze .intList .intItem .intRiskRating,.largeSize .desktop-riskrating .intList .intItem .intRiskRating{position:absolute;top:0;left:20;bottom:0;width:28px;margin-left:50px;text-align:center;font-size:24px;font-weight:700;line-height:45px;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.1)}
+.largeSize .desktop-analyze .ratingX,.largeSize .desktop-riskrating .ratingX{background:red;color:#fff}
+.largeSize .desktop-analyze .ratingD,.largeSize .desktop-riskrating .ratingD{background:#ff8d00;color:#fff}
+.largeSize .desktop-analyze .ratingC,.largeSize .desktop-riskrating .ratingC{background:#f8d130;color:#fff}
+.largeSize .desktop-analyze .ratingB,.largeSize .desktop-riskrating .ratingB{background:#f8f8f8;color:#7ed321!important;text-shadow:1px 1px 0 #fff}
+.largeSize .desktop-analyze .ratingA,.largeSize .desktop-riskrating .ratingA{background:#f8f8f8;color:#21B4D3!important;text-shadow:1px 1px 0 #fff}
+.largeSize .desktop-analyze .analyze-disclaimer,.largeSize .desktop-riskrating .analyze-disclaimer{font-size:.7em;line-height:1.1em;padding:10px 50px;margin:0;color:#666;border-top:1px solid #e2e2e2}
+.largeSize .desktop-analyze #analyze-copyright,.largeSize .desktop-riskrating #analyze-copyright{font-size:.7em;padding:0 10px 10px;margin:0;color:#666}
+.largeSize #actions .onebutton a,.largeSize .disclaimer-button .onebutton{color:#fff;font-weight:500;font-size:1em;text-decoration:none;text-align:center;line-height:40px;border-radius:4px}
+.largeSize .disclaimer-button{text-align:center;padding:0!important}
+.largeSize .disclaimer-button .onebutton{padding:0 50px;margin:30px;display:inline-block;background:#0081c6;cursor:pointer}
+.largeSize #actions{background:#fff;position:absolute;bottom:0;left:0;right:0;z-index:2}
+[misc=editing] .largeSize #actions{display:none}
+.largeSize #actions .onebutton{height:64px}
+.largeSize #actions .onebutton a{background:#0081c6;position:absolute;bottom:100px;left:40%;right:40%}
+.basicSize .utd-logo,.lt-ie9 .largeSize .utd-logo{background:url(utd-logo-desktop-basic.png) 50% 50% no-repeat}
+.lt-ie9 .largeSize .lexi-tab{border:1px solid #00905a;border-bottom:none}
+.lt-ie9 .largeSize .key-arrow li{font-family:Lucida Sans Unicode,Arial Unicode MS,Arial}
+.lt-ie9 .largeSize .key-arrow li ul{margin-top:0;padding-top:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.lt-ie9 .largeSize .utd-listView li{padding:15px 15px 15px 45px;border-bottom:none}
+.lt-ie9 .largeSize .utd-listView li a{padding-top:2px;padding-bottom:2px}
+.lt-ie9 .largeSize .utd-listView li a.removedrug{height:20px;line-height:18px}
+.lt-ie9 .largeSize .autoCompleteList{top:44px;border:1px solid #aaa}
+.basicSize{height:100%}
+.basicSize #header{position:absolute;width:100%}
+.basicSize #header .lexi-tab{border:1px solid #00905a;border-bottom:none}
+.basicSize .sidebar{display:none;position:absolute;height:100%}
+.basicSize #main-container{width:600px;margin:0 auto;line-height:1.4em}
+}
+@media print{.intCount,.intRiskRating{font-weight:700}
+body{margin:.25in;font-size:11pt}
+#druglist-desk1,#druglist-desk2,#header-container,.desktop-toolbar,.intCountBar a,.iv-disclaimer-mobile-style,.key-arrow,.key-morelink,.printButton,.search-field,.sidebar-footer a,.sidebar-header p,a.removedrug{display:none!important}
+.desktop-druglist,.intCount{display:block!important}
+.risk-table{margin:20px 0;font-size:.8em}
+.risk-table .rating-desc{padding-left:5px}
+.risk-table .rating-group{padding-right:20px}
+.drugList{width:auto}
+ul.utd-listView{margin:10px 0;font-size:.9em}
+ul.utd-listView li{padding:0!important;margin-left:30px!important;border-bottom:none!important;list-style-type:disc}
+ul.utd-listView li a{max-width:none;padding:2px 0!important;color:#000}
+.sidebar-footer{margin-bottom:30px;border-bottom:1px solid #ccc}
+h4{margin-bottom:0}
+.analyze-disclaimer,.iv-disclaimer{font-size:.75em;margin:15px 0 30px}
+.intRiskRating{padding:0 10px;border:1px solid #000;margin-right:10px;min-width:10px}
+ul.intList.utd-listView li{padding:5px 0!important}
+.intDrug+.intDrug:before{content:"  /  "}
+.ratingX{background:red;border-color:red;color:#000}
+.ratingD{background:#ff8d00;border-color:#ff8d00;color:#000}
+.ratingC{background:#f8d130;border-color:#f8d130;color:#000}
+.ratingA,.ratingB{background:#f8f8f8;border-color:#ccc;color:#000!important;text-shadow:1px 1px 0 #fff}
+}

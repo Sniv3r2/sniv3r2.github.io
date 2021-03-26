@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["xf"]={"title":null,"keywords":null,"body":{"df":1,"docs":{"3332":1.4142135623730952},"e":{"df":1,"docs":{},"n":{"df":1,"docs":{"8597":1.0,"8599":1.0}}},"o":{"df":1,"docs":{},"r":{"df":1,"docs":{},"d":{"df":1,"docs":{"14717":1.7320508075688772}}}}}}

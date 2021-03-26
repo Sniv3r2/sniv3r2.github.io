@@ -1,0 +1,317 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <title>UpToDate 2018</title>
+    <link rel="stylesheet" href="files/style.css" />
+    <script language="javascript" type="text/javascript" src="files/script.js"></script>
+    <script language="javascript" type="text/javascript" src="sfiles/words.js"></script>
+    <script language="javascript" type="text/javascript" src="sfiles/titles.js"></script>
+	<script language="javascript" type="text/javascript" src="sfiles/types.js"></script>
+    <script src="files/elasticlunr.js"></script>
+    <script type="text/javascript">
+        var maxResultsCount = 250;
+		var all_results;
+		var selType=0;
+
+        rawQuery = GET()['s'];
+		if (!rawQuery)
+			rawQuery="";
+        query = rawQuery.replace(/\+/g, ' ')
+
+		t= GET()['t'];
+		if (!t)
+			selType = 0;		
+		else
+			selType = parseInt(t);
+		
+        var deep = false;
+        if (GET()['deep'] == 1)
+            deep = true;
+
+        var index = elasticlunr(function () {
+            this.addField('title');
+            this.addField('body');
+            this.setRef('id');
+            this.saveDocument(false);
+        });
+        var sep = /[^a-zA-Z0-9]/;
+        elasticlunr.tokenizer.setSeperator(sep);
+
+        index.indexLocation = (!deep) ? "qindex/" : "index/";
+
+        var rootElement;
+        var outlineToggleElement;
+        var headerElement;
+        var pTitleElement;
+        var pResutsElement;
+        var isDesktop = true;
+
+        window.addEventListener("load", function () {			
+            rootElement = document.getElementById("pageContainer");            
+			headerElement = document.getElementById("header");            
+            pTitleElement = document.getElementById("topicTitleHeader");
+            pResutsElement = document.getElementById("searchResultsContainer");
+
+            initSize();
+
+			filterType(selType, false);
+			
+            adjustForSize();
+			startLoading();
+			adjustForSize();
+        });
+        window.addEventListener("resize", function () {
+            adjustForSize();
+        });
+
+        function adjustForSize() {
+            isDesktop = chkIsDesktop();
+            rootElement.classList.toggle("isDesktop", isDesktop);
+			pResutsElement.style.top = headerElement.clientHeight;
+        };
+
+        function onTextInput(event) {
+            if (event.charCode == 13) {
+                submitSearch();
+            }
+        }
+
+        function submitSearch() {
+            var s = document.getElementById('tbSearch').value;
+            doSearch(s, "", selType);
+        };
+
+        function clearSearch() {
+            document.getElementById('tbSearch').value = "";
+            toggleSearch(false);
+        };
+		
+		//types: "medical_review","medical_patient","medical_basics","medical_answer","medical_pcu","medical_society_guidelines","medical_whatsnew","drug_general","drug_patient","drug_pediatric","drug_international","calc_professional","calc_patient"
+		//All|Medical|Drug|Calc|Patient
+		function filterType(type, rewriteResults=true) {
+			selType = type;
+			var l = document.getElementById("searchFilter");
+			var ls = l.getElementsByTagName("li");
+			for (var i=0; i<ls.length; i++) {
+				ls[i].classList.toggle("selected", (selType==i));							
+			}
+			if (rewriteResults) {
+				writeResults();
+			}
+		}
+		function interceptForType(e) {
+			var sender = (e && e.target) || (window.event && window.event.srcElement);
+			sender.href += "&t=" + selType;
+		}
+		function filterArticle(type) {
+			switch (selType) {
+				case 0:
+					return true;
+				case 1:
+					return (type=="medical_review");
+				case 2:
+					return (type=="drug_general")||(type=="drug_pediatric")||(type=="drug_international")||(type=="drug_patient");
+				case 3:
+					return (type=="calc_professional")||(type=="calc_patient");
+				case 4:
+					return (type=="medical_patient")||(type=="medical_basics")||(type=="drug_patient")||(type=="calc_patient");
+			}
+		}
+    </script>
+</head>
+<body>
+    <div id="pageContainer" class="isDesktop search-page">
+        <div id="header" class="search-collapsed">
+            <div class="utd-menu">
+                <img class="logo-desktop" src="files/utd-logo-desktop.png" />
+                <img class="hamburger-mobile" src="files/hamburger.png" onclick="onHamburgerClick();">
+                <a class="logo-mobile" href="../UpToDate.htm"><img src="files/utd-menu-icon2.png"></a>
+
+                <div id="mTopicTitle"></div>
+                <div class="search" align="left">
+                    <div class="search-content">
+                        <span class="search-icon">
+                            <img src="files/search.png">
+                        </span>
+                        <div class="search-bar">
+                            <input id="tbSearch" type="text" spellcheck="false" class="search-control" data-autocorrect="off" data-autocapitalize="off" autocomplete="off" autocapitalize="off" autocorrect="off" required="" onkeypress="onTextInput(event);">
+                            <span class="search-submit" onclick="submitSearch();"></span>
+                        </div>
+                        <span class="search-clear" id="clearSearch" onclick="clearSearch();">
+                            <img src="files/times-circle.png">
+                        </span>
+                    </div>
+                </div>
+                <div id="mToolbar">
+                    <div class="mToolbarBtn" onclick="resizeText(1);">
+                        <img src="files/zoom_in.png">
+                    </div>
+                    <div class="mToolbarBtn" onclick="resizeText(-1);">
+                        <img src="files/zoom_out.png">
+                    </div>
+                    <div id="mSearchButton" class="mToolbarBtn" onclick="toggleSearch(true);">
+                        <img src="files/search_w.png">
+                    </div>
+                </div>
+                <ul class="menu-links">
+                    <li id="overflowMenu"></li>
+                    <li><span class="sep"></span><a href="di.htm"><span>Drug Interactions</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=calculators/categorized"><span>Calculators</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="topic.htm?path=practice-changing-updates"><span>PCUs</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=whats-new"><span>What's New</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=patient-education"><span>Patient Education</span></a><i></i></li>
+                    <li class="firstnav"><a href="toc.htm"><span>Contents</span></a><i></i></li>
+                    <li class="firstnav"><a href="https://supa.ml/UpToDate.htm"><span>Up To Date</span></a><i></i></li>
+                    <li class="firstnav"><a href="https://supa.ml"><span>Trang chủ</span></a><i></i></li>
+                </ul>
+            </div>
+            <div id="topicTitleHeader">
+				.
+            </div>	
+				
+        </div>
+        <div id="searchResultsContainer">		
+			<div id="searchFilter">
+				<ul>
+					<li onclick="filterType(0);" class="selected"><a>All</a></li>
+					<li onclick="filterType(1);"><a>Medical</a></li>
+					<li onclick="filterType(2);"><a>Drug</a></li>
+					<li onclick="filterType(3);"><a>Calc</a></li>
+					<li onclick="filterType(4);"><a>Patient</a></li>
+				</ul>
+			</div>	
+            <div id="suggestions"></div>
+            <div id="searchResults">
+				<img class="imgLoading" src='./files/loading.gif'/>
+                <script type="text/javascript">
+                    var rootElement = rootElement = document.getElementById("pageContainer");
+
+                    function writeTitle() {
+                        var id = "topicTitleHeader";
+                        var html = "<div>";
+                        if (!deep)
+                            html += "Quick";
+                        else
+                            html += "Search";
+                        html += " Results for \"<b>" + query + "\"</b>&nbsp";
+                        document.getElementById("tbSearch").value = query;
+                        if (!deep) {
+                            html += "<a class='interceptableLink' href='search.htm?s=" + rawQuery + "&deep=1'>Search Deeper</a>";
+                        }
+                        html += "</div>";
+						var d_t = document.getElementById(id);
+                        d_t.innerHTML = html;
+                    }
+                    function writeQSuggestions() {
+                        var searchWords = rawQuery.split('+');
+                        var empty = true;
+                        var ss = {};
+                        for (var i = 0; i < searchWords.length; i++) {
+                            var sKey = searchWords[i];
+
+                            if (sKey.length < 3)
+                                continue;
+
+                            var similars = findSimilar(sKey, suggestions, 5);
+                            if ((similars.length == 0) || (sKey.toLowerCase() == similars[0].toLowerCase()))
+                                continue;
+
+                            empty = false;
+
+                            ss[sKey] = [];
+
+                            var original = searchWords[i];
+
+                            for (var ii = 0; ii < similars.length; ii++) {
+                                searchWords[i] = similars[ii];
+                                ss[sKey][ii] = [];
+                                ss[sKey][ii]["correct"] = similars[ii];
+                                ss[sKey][ii]["url"] = searchWords.join("+");
+                            }
+                            searchWords[i] = original;
+                        }
+
+                        if (empty)
+                            return;
+
+                        var s = "";
+                        s += "<b>Did you mean by:</b><ul>";
+                        for (var suggestionKey in ss) {
+                            var suggestion = ss[suggestionKey];
+                            s += "<li> <i>" + suggestionKey + "</i>: ";
+                            for (var ii = 0; ii < suggestion.length; ii++) {
+                                var sugAlt = suggestion[ii];
+                                s += "<a class='interceptableLink' href='search.htm?s=" + sugAlt["url"] + ((deep) ? ("&deep=1") : ("")) + "'> " + sugAlt["correct"] + "</a>";
+                                if (ii != suggestion.length - 1)
+                                    s += " &nbsp;|&nbsp; ";
+                            }
+                            s += ".</li>";
+                        }
+                        s += "</ul>";
+
+                        var d_ss = document.getElementById("suggestions");
+                        d_ss.innerHTML = s;
+                    }					
+					function writeResults() {					
+                        s = ""
+                        s += "<ul>";
+						var nr=0;
+                        for (var i = 0; (i < allResults.length) && (nr < maxResultsCount) ; i++) {
+                            var rr = allResults[i].refn;
+							
+							var f = filterArticle(types[allResults[i].ref]);
+							if (!f)
+								continue;
+							
+							var rrt = titles[rr];
+                            s += "<li><a href='topic.htm?path=" + rr + "'><span>" + /*"●"*/ /**/ (nr+1).toString() +  ". " /**/ +rrt + "</span></a></li>";
+							nr += 1;							
+                        }
+                        s += "</ul>";
+
+                        var d_sr = document.getElementById("searchResults");
+                        d_sr.innerHTML = s;
+                    }
+
+					function startLoading() {
+						if (query) {
+							document.title = "Search Resutls for \"" + query + "\"";
+
+							writeTitle();
+
+							var done = function (results) {
+								writeQSuggestions();
+
+								var itms = document.getElementsByClassName('interceptableLink');
+								for (var i=0; i< itms.length; i++) {
+									itms[i].addEventListener("click", interceptForType);
+								}
+								
+								allResults = results;
+								writeResults();
+
+								setLinks();
+							}
+
+							index.prepareSearch(query, function () {
+								var results = index.search(query, {
+									fields: {
+										title: { boost: 2 },
+										keywords: { boost: 1.5 },
+										body: { boost: 1 }
+									}
+								});
+								results = index.ParseResults(results);
+								done(results);                            
+							});
+						}
+					}
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

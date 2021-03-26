@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["uk"]={"title":null,"keywords":{"df":4,"docs":{"10353":1.0,"10552":1.0,"14071":1.0,"15466":1.0},"e":{"df":4,"docs":{},"p":{"df":4,"docs":{"7184":1.0}}},"p":{"df":4,"docs":{},"a":{"df":4,"docs":{},"c":{"df":4,"docs":{"11254":1.0}}}}}}

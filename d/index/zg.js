@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["zg"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"e":{"df":0,"docs":{},"s":{"df":0,"docs":{},"i":{"df":0,"docs":{},"c":{"df":0,"docs":{"97":2.23606797749979,"98":1.0}}}}}}}

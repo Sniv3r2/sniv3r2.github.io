@@ -1,0 +1,156 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <title>UpToDate 2018</title>
+    <link rel="stylesheet" href="files/style.css" />
+    <script language="javascript" type="text/javascript" src="files/script.js"></script>
+    <script type="text/javascript">
+        path = GET()['path'];
+
+        var rootElement;
+        var outlineToggleElement;
+        var headerElement;
+
+        var isDesktop = true;
+
+        window.addEventListener("load", function () {
+            rootElement = document.getElementById("pageContainer");
+            initSize();
+            adjustForSize();
+			startLoading();
+        });
+        window.addEventListener("resize", function () {
+            adjustForSize();
+        });
+
+        function adjustForSize() {
+            isDesktop = chkIsDesktop();
+            rootElement.classList.toggle("isDesktop", isDesktop);
+        }
+        function onTextInput(event) {
+            if (event.charCode == 13) {
+                submitSearch();
+            }
+        }
+		
+        function submitSearch() {
+            var s = document.getElementById('tbSearch').value;
+            doSearch(s);
+        };
+        
+        function clearSearch() {
+            document.getElementById('tbSearch').value = "";
+            toggleSearch(false);
+        };
+    </script>
+</head>
+<body>
+    <div id="pageContainer" class="isDesktop">
+        <div id="header" class="search-collapsed">
+            <div class="utd-menu">
+                <img class="logo-desktop" src="files/utd-logo-desktop.png" />
+                <img class="hamburger-mobile" src="files/hamburger.png" onclick="onHamburgerClick();">
+                <img class="logo-mobile-img" src="files/utd-menu-icon2.png">
+
+                <div id="mTopicTitle"></div>
+                <div class="search" align="left">
+                    <div class="search-content">
+                        <span class="search-icon">
+                            <img src="files/search.png">
+                        </span>
+                        <div class="search-bar">
+                            <input id="tbSearch" type="text" spellcheck="false" class="search-control" data-autocorrect="off" data-autocapitalize="off" autocomplete="off" autocapitalize="off" autocorrect="off" required="" onkeypress="onTextInput(event);">
+                            <span class="search-submit" onclick="submitSearch();"></span>
+                        </div>
+                        <span class="search-clear" id="clearSearch" onclick="clearSearch();">
+                            <img src="files/times-circle.png">
+                        </span>
+                    </div>
+                </div>
+                <div id="mToolbar">
+                    <div class="mToolbarBtn" onclick="resizeText(1);">
+                        <img src="files/zoom_in.png">
+                    </div>
+                    <div class="mToolbarBtn" onclick="resizeText(-1);">
+                        <img src="files/zoom_out.png">
+                    </div>
+                    <div id="mSearchButton" class="mToolbarBtn" onclick="toggleSearch(true);">
+                        <img src="files/search_w.png">
+                    </div>
+                </div>
+                <ul class="menu-links">
+                    <li id="overflowMenu"></li>
+					<li><span class="sep"></span><a href="di.htm"><span>Drug Interactions</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=calculators/categorized"><span>Calculators</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="topic.htm?path=practice-changing-updates"><span>PCUs</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=whats-new"><span>What's New</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=patient-education"><span>Patient Education</span></a><i></i></li>
+                    <li class="firstnav"><a href="toc.htm"><span>Contents</span></a><i></i></li>
+                </ul>
+            </div>
+            <div id="topicTitleHeader">
+
+            </div>
+        </div>
+        <div id="pageContent">
+            <div id="toc-list">
+				<img class="imgLoading" src='./loading.gif'/>
+                <script type="text/javascript">
+					function startLoading() {
+						var base = "table-of-contents";
+						var name;
+						if (!path)
+							name = base;
+						else
+							name = decodeURIComponent(path).replace("/", "_");
+						loadScript(base + "/" + name + ".js", function () {
+
+							document.title = data.name;
+							setInnerHtml('topicTitleHeader', data.name);
+
+							var s = "";
+							if (data.sections) {
+								s += '<div class="utd-listView" id="toc-sections">';
+								for (var i = 0; i < data.sections.length; i++) {
+									var section = data.sections[i];
+									s += '<div class="toc-sectionName"><span>' + section.name.toUpperCase() + '</span></div>';
+
+									if (data.sections[i].subSections) {
+										for (var ii = 0; ii < section.subSections.length; ii++) {
+											var subSection = section.subSections[ii];
+											s += '<div class="toc-subSectionName"><span>' + subSection.name.toUpperCase() + '</span></div>';
+											
+											for (var iii = 0; iii < subSection.items.length; iii++) {
+												var itm = subSection.items[iii];
+												s += '<div class="toc-sectionItems"><a href="' + itm.url + '">' + itm.name + '</a></div>';
+											}                                        
+										}
+									} else {
+
+										for (var iii = 0; iii < section.items.length; iii++) {
+											var itm = section.items[iii];
+											s += '<div class="toc-sectionItems"><a href="' + itm.url + '">' + itm.name + '</a></div>';
+										}
+
+									}
+								}
+								s += '</div>';
+							} else {
+								for (var iii = 0; iii < data.items.length; iii++) {
+									var itm = data.items[iii];
+									s += '<div class="toc-sectionItems"><a href="' + itm.url + '">' + itm.name + '</a></div>';
+								}
+							}
+
+							setInnerHtml('toc-list', s);
+							setLinks();
+						});
+					}
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

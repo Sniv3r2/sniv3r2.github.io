@@ -1,0 +1,66 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>UpToDate 2018</title>
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="files/image.css" />
+	<script language="javascript" type="text/javascript" src="sfiles/grades.js"></script>
+    <script type="text/javascript">
+        var GET = function () {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&#]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var n = GET()['i'];
+        
+        function setInnerHtml(id, html) {
+            //var newdiv = document.createElement("div");
+            //newdiv.innerHTML = html;
+            //document.getElementById(id).appendChild(newdiv);
+            document.getElementById(id).innerHTML += html;
+        }
+        function loadScript(url, callback) {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            console.log(url);
+            script.src = url;
+            script.onload = callback
+            script.onreadystatechange = function () {
+                if (this.readyState == 'complete') callback();
+            }
+            head.appendChild(script);
+        };
+    </script>
+    
+</head>
+<body>
+    <div id="printHeader" class="simpleHeader clearfix">
+        <div id="headerSimpleLeft" class="float">
+            <img src="files/UTD3_masthead.png" alt="UpToDate">            
+        </div>
+        <div id="headerSimpleRight" class="right">
+            <img src="files/wkh-logo.png" style="width:200px;" id="wkLogo" alt="Wolters Kluwer Health">
+        </div>        
+    </div>
+    <div id="graphicsCopy">   &copy;2018 UpToDate</div>
+    <div id="pageContainer">        
+        <div id="graphics">
+
+        </div>
+    </div>
+	
+	<script type="text/javascript">
+		var ns = ["", "1A", "1B", "1C", "2A", "2B", "1C"];
+		var title = "Grade " + ns[n];
+		
+        document.title = title;
+            
+        setInnerHtml("graphics", grades[n]);  
+    </script>
+</body>
+</html>

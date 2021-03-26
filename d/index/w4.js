@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["w4"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"0":{"df":0,"docs":{},"6":{"df":0,"docs":{},"r":{"df":0,"docs":{"18248":1.0}}}}}}

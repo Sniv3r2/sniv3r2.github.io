@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["bd"]={"title":null,"keywords":{"df":1,"docs":{"2054":1.0}}}

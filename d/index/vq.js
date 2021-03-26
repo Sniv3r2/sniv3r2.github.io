@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["vq"]={"title":null,"keywords":null,"body":{"df":4,"docs":{"930":1.0,"6715":1.0,"6820":1.0,"16119":1.0},"i":{"df":4,"docs":{"4385":1.0,"12134":1.4142135623730952}}}}

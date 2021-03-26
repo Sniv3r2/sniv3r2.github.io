@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["3y"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"e":{"df":0,"docs":{},"a":{"df":0,"docs":{},"r":{"df":0,"docs":{"17309":1.0}}}}}}

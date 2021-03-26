@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["uq"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"c":{"df":0,"docs":{},"c":{"df":0,"docs":{},"2":{"df":0,"docs":{"14992":1.0}}}}}}

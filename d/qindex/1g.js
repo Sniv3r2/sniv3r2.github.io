@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["1g"]={"title":null,"keywords":null}

@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["25"]={"title":null,"keywords":{"df":6,"docs":{"1032":1.0,"1059":1.0,"1543":1.0,"12048":1.0,"12481":1.0,"12534":1.0}}}

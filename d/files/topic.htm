@@ -1,0 +1,242 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <title>UpToDate 2018</title>
+    <link rel="stylesheet" href="files/style.css" />
+    <script language="javascript" type="text/javascript" src="files/script.js"></script>
+	<script language="javascript" type="text/javascript" src="sfiles/dict.js"></script>
+	
+    <script type="text/javascript">
+        path = GET()['path'];        
+
+        var rootElement;
+		
+        var outlineToggleElement;
+        var headerElement;
+
+        var isDesktop = true;
+        var isOutlineOpened = false;
+        var isDesktopOutlineOpened = true;
+
+        function onHamburgerClick() {
+            toggleOutline(!isOutlineOpened);
+        }
+
+        function toggleDesktopOutline(change) {
+            isDesktopOutlineOpened = !isDesktopOutlineOpened;
+            toggleOutline(isDesktopOutlineOpened);
+        }
+        function toggleOutline(open) {
+            rootElement.classList.toggle("outline-hidden", !open);
+            outlineToggleElement.title = (open) ? ("Hide Topic Outline") : ("Show Topic Outline");            
+            isOutlineOpened = open;
+			if (open)
+				document.getElementById("topicTextContent").focus();
+        }
+        function adjustForSize() {
+            isDesktop = chkIsDesktop();
+            rootElement.classList.toggle("isDesktop", isDesktop);
+            if (isDesktop)
+                toggleOutline(isDesktopOutlineOpened);
+            else
+                toggleOutline(false);
+        }
+        window.addEventListener("load", function () {
+            rootElement = document.getElementById("pageContainer");
+            outlineToggleElement = document.getElementById("outlineToggle");
+            headerElement = document.getElementById("header");
+
+            adjustForSize();
+			startLoading();
+			
+            document.getElementById("topicOutline").className += "topicOutlineLoaded";
+            document.getElementById("topicTextContent").className += "topicTextContentLoaded";
+            outlineToggleElement.className += "outlineToggleLoaded";
+
+            initSize();            
+
+            document.getElementById("topicTextContent").focus();
+        });
+        window.addEventListener("resize", function () {
+            adjustForSize();            
+        });        
+        
+        window.addEventListener("hashchange", function () {
+            if (!isDesktop)
+                toggleOutline(false);
+        });       
+
+        
+
+        function onTextContentClick() {
+            window.find();
+            if (!isDesktop) {
+                toggleOutline(false);
+                toggleSearch(false);
+            };
+        };
+
+        function onTopicOutlineClick() {
+            toggleSearch(false);
+        }
+
+        function toggleSearch(open) {
+            headerElement.classList.toggle("search-collapsed", !open);
+            if (open)
+                document.getElementById("tbSearch").focus();
+            else
+                document.getElementById("topicTextContent").focus();
+        }
+
+        function clearSearch() {
+            document.getElementById('tbSearch').value = "";
+            toggleSearch(false);
+        };
+
+		function onTextInput(event) {
+            if (event.charCode == 13) {
+                submitSearch();
+            }
+        }
+		
+        function submitSearch() {
+            var s = document.getElementById('tbSearch').value;
+            doSearch(s);
+        };
+
+
+        function load() {
+            setInnerHtml("topicTitleHeader", p_topicTitleHeader);
+            setInnerHtml("mTopicTitle", p_mTopicTitle);
+            setInnerHtml("topicTextContent", p_topicTextContent);
+            setInnerHtml("topicOutlineContent", p_topicOutlineContent);
+
+			if (p_topicJS) {
+                    eval(p_topicJS);
+
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.innerHTML = p_topicJS;
+
+                    document.head.appendChild(script);
+                    document.getElementById('pageContainer').classList.add("calculatorPage");
+                }
+			
+            var scripts = document.getElementById('topicTextContent').getElementsByTagName('script')
+            for (var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.innerHTML = scripts[i].innerHTML;
+
+                document.head.appendChild(script);
+            }
+
+            setLinks();
+
+            setTimeout(function () {
+                var ddd = document.getElementById("topicTextContent");
+                if (document.location.hash) {
+                    var h = document.querySelector(document.location.hash);
+                    h.scrollIntoView();
+                    //window.scroll(0, 69);
+                }
+                //var a = document.location.hash;
+                //document.location.hash = a + "a";
+                //document.location.hash = a;
+            }, 100);
+        };
+    </script>
+</head>
+<body>
+    <noscript>It seems to us that you have your JavaScript disabled on your browser. JavaScript is required in order for the site to behave correctly.  Please enable JavaScript to use the site.</noscript>
+    <div id="pageContainer" class="topic-page outline-hidden">
+        <div id="header" class="search-collapsed">
+            <div class="utd-menu">
+                <img class="logo-desktop" src="files/utd-logo-desktop.png" />
+                <img class="hamburger-mobile" src="files/hamburger.png"  onclick="onHamburgerClick();">
+                <img class="logo-mobile" src="files/utd-menu-icon2.png">
+                
+                <div id="mTopicTitle"></div>
+                <div class="search" align="left">
+                    <div class="search-content">
+                        <span class="search-icon">
+                            <img src="files/search.png">
+                        </span>
+                        <div class="search-bar">
+                            <input id="tbSearch" type="text" spellcheck="false" class="search-control" data-autocorrect="off" data-autocapitalize="off" autocomplete="off" autocapitalize="off" autocorrect="off" required="" onkeypress="onTextInput(event);">
+                            <span class="search-submit" onclick="submitSearch();"></span>
+                        </div>
+                        <span class="search-clear" id="clearSearch" onclick="clearSearch();">
+                            <img src="files/times-circle.png">
+                        </span>
+                    </div>
+                </div>
+                <div id="mToolbar">
+                    <div class="mToolbarBtn" onclick="resizeText(1);">
+                        <img src="files/zoom_in.png">
+                    </div>
+                    <div class="mToolbarBtn" onclick="resizeText(-1);">
+                        <img src="files/zoom_out.png">
+                    </div>
+                    <div id="mSearchButton" class="mToolbarBtn" onclick="toggleSearch(true);">
+                        <img src="files/search_w.png">
+                    </div>
+                </div>
+                <ul class="menu-links">
+                    <li id="overflowMenu"></li>
+                    <li><span class="sep"></span><a href="di.htm"><span>Drug Interactions</span></a><i></i></li>
+					<li><span class="sep"></span><a href="toc.htm?path=calculators/categorized"><span>Calculators</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="topic.htm?path=practice-changing-updates"><span>PCUs</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=whats-new"><span>What's New</span></a><i></i></li>
+                    <li><span class="sep"></span><a href="toc.htm?path=patient-education"><span>Patient Education</span></a><i></i></li>
+                    <li class="firstnav"><a href="toc.htm"><span>Contents</span></a><i></i></li>
+                </ul>
+            </div>
+            <div id="topicTitleHeader">
+				<div class="desktopToolbar">
+					<div class="dToolbarBtn" onclick="resizeText(1);">					
+						Zoom In						
+					</div>
+					<div class="dToolbarBtn" onclick="resizeText(-1);">
+						Zoom Out
+					</div>
+				</div>
+            </div>
+        </div>
+        <div id="topicContainer">
+            <div id="outlineToggle" title="Hide Topic Outline" onclick="toggleDesktopOutline();"></div>
+            <div id="topicOutline" onclick="onTopicOutlineClick();">
+                <div id="topicOutlineContent">					
+                </div>
+            </div>
+            <div id="topicTextContent" onscroll="onTextContentClick();" onmousedown="onTextContentClick();" onclick="onTextContentClick();" tabindex="1">
+				<img class="imgLoading" src='./loading.gif'/>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function startLoading() {
+				var base = "topics";
+				var name;
+				if (path) {
+					name = decodeURIComponent(path).replace("/", "_");
+					name = topics_dictionary[name];
+					loadScript(base + "/" + name + ".js", function () {
+						document.title = data.title;
+
+						p_topicTitleHeader = data.title;
+						p_mTopicTitle = data.title;                
+						p_topicTextContent = data.body;
+						p_topicOutlineContent = data.outline;
+						p_topicJS = data.javascript;
+						
+						load();
+					});
+				}
+			}
+        </script>
+        
+    </div>
+</body>
+</html>

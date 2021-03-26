@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["3k"]={"title":null,"keywords":null,"body":{"df":0,"docs":{},"g":{"df":0,"docs":{"509":1.0,"4511":1.0}}}}

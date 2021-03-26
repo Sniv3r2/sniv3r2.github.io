@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["l6"]={"title":null,"keywords":null,"body":{"df":1,"docs":{"16310":1.0},"0":{"df":1,"docs":{"10685":1.0},"0":{"df":1,"docs":{},"p":{"df":1,"docs":{"10832":1.0}}}},"7":{"df":1,"docs":{},"5":{"df":1,"docs":{},"3":{"df":1,"docs":{},"0":{"df":1,"docs":{"6687":2.0,"11926":1.4142135623730952}}}}}}}

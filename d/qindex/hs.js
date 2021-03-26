@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["hs"]={"title":{"df":0,"docs":{},"i":{"df":0,"docs":{},"l":{"df":0,"docs":{"3220":1.0}}}},"keywords":{"df":0,"docs":{},"n":{"df":0,"docs":{},"2":{"df":0,"docs":{"8195":1.0}}},"p":{"df":0,"docs":{},"4":{"df":0,"docs":{},"0":{"df":0,"docs":{"9918":1.0,"13122":1.0}}}}}}

@@ -1,0 +1,101 @@
+
+SUP { font-size: 75%; }
+
+SUB { font-size: 75%; }
+
+.KEYWORD1 {
+	background-color:blue; 
+        color:white;
+}
+
+
+/* obsolete; used for multiple search terms 
+.KEYWORD2 {
+        background-color:red;
+        color:white;
+}
+.KEYWORD3 {
+        background-color:red;
+        color:white;
+}
+*/
+
+
+.name {
+        font-size: 130%;
+        font-weight: bold;
+	color: #009999;
+}
+
+.bookname{
+        font-size: 90%;
+        font-style: italic;
+ 	font-weight: bold;
+}
+
+
+.copyright {
+	font-size: 85%;
+	font-style: italic;
+}
+
+CAPTION {
+	font-weight: bold;
+}
+
+.labels {	
+	font-size:105%;
+	font-weight: bold;
+	font-family: Arial;
+	color: black;
+}
+
+
+
+
+
+
+/*---------------------------------------*/
+/* example of changing single field name */
+/*---------------------------------------*/
+/*
+a.use {
+	color: red;
+	font-size:110%;
+}
+*/
+
+
+
+/* ------------------------------------------------------------------------ */
+/* begin Lexi-Interact                                                      */
+/* ------------------------------------------------------------------------ */
+/*---------------------------------*/
+/* Interaction significance labels */
+/*---------------------------------*/
+.sig1        { color: red;     } 
+.crlcolor    { color: #990000; }
+.onlinecolor { color: #339999; }
+.footnote {
+	margin-left: 16;
+	text-indent: -16;
+}
+
+.lookupcategory {
+	margin-left: 25;
+	text-indent: -25;
+}
+
+.analysisentry {
+	margin-left: 45;
+	text-indent: -27;
+}
+
+
+.redbold {
+	color: red;
+	font-weight: bold;
+}
+/* ------------------------------------------------------------------------ */
+/* end Lexi-Interact                                                        */
+/* ------------------------------------------------------------------------ */

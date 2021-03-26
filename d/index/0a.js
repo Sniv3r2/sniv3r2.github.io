@@ -1,0 +1,1 @@
+var dStore;if (!dStore) dStore=[]; dStore["0a"]={"title":null,"keywords":null,"body":{"df":2,"docs":{"3060":2.0,"12439":1.0}}}
